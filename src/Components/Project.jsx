@@ -289,7 +289,7 @@ Javascript: Backend and database connectvity with ajax
       
 
         </div>
-        <input type = "file" onChange={data}/>
+        
         
         </div>
        

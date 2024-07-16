@@ -10,12 +10,66 @@ import p1 from '../images/p1 (1).png';
 import foody from '../images/p3 (1).png';
 import cocoons from '../images/p2 (6).png';
 import app from './Firebase';
-//import {getDatabase, ref, set, push, get} from 'firebase/database';
-
+import { uploadBytes, ref, getDownloadURL, listAll } from 'firebase/storage';
+import { storage } from './Firebase';
 import { useState } from 'react';
+//import {getDatabase, ref, set, push, get} from 'firebase/database';
 
 
 function Main({profile1}){
+    const [url, setURL] = useState('');
+
+    let data = async(e)=>{
+    
+        const file = e.target.files[0];
+      //  let db = getDatabase(app);
+      //  const newref = push(ref(db, 'profile/'));
+    
+        const imageref = ref(storage, `files/${file.name}`);
+        const listall = ref(storage, 'files/');
+        uploadBytes(imageref, file);
+        const img = await listAll(listall);
+        const urls = await Promise.all(
+            img.items.map((item) => getDownloadURL(item))
+          );
+          console.log(urls);
+        
+      /**   set(newref, {
+            name: 'snkd',
+            img: file
+        }).then(()=>{
+            alert('successfully updated');
+        })
+        const dataref = ref(db, 'profile/');
+        const snapshot = await get(dataref);
+       
+            console.log(Object.values(snapshot.val()));
+        */
+      await getDownloadURL(imageref).then((url1)=>{
+        console.log(url1)
+        setURL(url1)
+       }).catch((err)=>{
+        switch (err.code) {
+            case 'storage/object-not-found':
+              // File doesn't exist
+              break;
+            case 'storage/unauthorized':
+              // User doesn't have permission to access the object
+              break;
+            case 'storage/canceled':
+              // User canceled the upload
+              break;
+      
+            // ...
+      
+            case 'storage/unknown':
+              // Unknown error occurred, inspect the server response
+              break;
+          }
+       })
+      
+
+    }
    
         
       /**   set(newref, {
@@ -271,7 +325,12 @@ function Main({profile1}){
          </div>
          
       
-
+         <div className = "border">
+            <form   encType="multipart/form-data">
+                <input type = "file" onChange={data}/>
+            </form>
+        </div>
+        <img src = {url}/>
     
      
 

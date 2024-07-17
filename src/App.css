@@ -591,8 +591,8 @@ color: orange;
 }
 .project2{
  
-  background-color: rgba(71, 66, 66, 0.429);
-  color: blue;
+  background-color:  rgba(81, 81, 219, 0.548);
+  color: white;
   z-index: 999;
   position: absolute;
   height: 0;
@@ -706,7 +706,7 @@ color: orange;
   font-family:'Courier New', Courier, monospace;
 
 }
-.register>form>div{
+.register>.form>form>div{
   max-width: 500px;
   margin-top: 30px;
   border: solid 2px orange;
@@ -714,33 +714,38 @@ color: orange;
   border-radius: 10px 10px;
   padding: 5px;
   
+  
    
 }
-.register>form>div>input{
-  width: 95%;
+.register>.form>form>div>input{
+  width: 80%;
   height: 100%;
   
   
   
 
 }
-.register>form>div>i{
+.register>.form>form>div>i{
   color: gold;
 }
-.register>form{
+.register>.form>form{
+ 
+}
+.register>.form{
   border: solid 2px #fdc50f;
   border-radius: 10px 10px;
 }
-.register>form>textarea{
+.register>.form>form>textarea{
    border: solid 2px orange;
 }
-.register>form>button{
+.register>.form>button{
   padding:  5px 10px 5px 10px;
   background: linear-gradient(180deg, #fdc50f 26.71%, #fb982f 99.36%);
-  box-shadow: 0px 10px 20px 3px rgba(251, 161, 40, 0.42); border-radius: 20px 20px;
+  box-shadow: 0px 10px 20px 3px rgba(251, 161, 40, 0.42); 
+  border-radius: 20px 20px;
   color: white;
   width: 150px;
-
+ 
 }
 
 

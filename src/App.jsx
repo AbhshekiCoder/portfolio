@@ -8,6 +8,7 @@ import {Route, Router, Routes} from 'react-router-dom';
 import About from './Components/About';
 import Project from './Components/Project';
 import './App.css'
+import Admin from './Components/Admin';
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
       <Route path ='/' element = {<Main profile1 = {toggle}/>}></Route>
       <Route path ='/About' element = {<About profile1={toggle}/>} ></Route>
       <Route path ='/Project' element = {<Project profile1={toggle}/>} ></Route>
+      <Route path ='/Admin' element = {<Admin/>} ></Route>
      
     </Routes>
     <img src ={item} />

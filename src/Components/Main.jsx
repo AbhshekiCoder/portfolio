@@ -9,96 +9,78 @@ import {Link} from 'react-router-dom';
 import p1 from '../images/p1 (1).png';
 import foody from '../images/p3 (1).png';
 import cocoons from '../images/p2 (6).png';
-import app from './Firebase';
-import { uploadBytes, ref, getDownloadURL, listAll } from 'firebase/storage';
-import { storage } from './Firebase';
 import { useState } from 'react';
-//import {getDatabase, ref, set, push, get} from 'firebase/database';
+import { useEffect } from 'react';
+import {app, storage} from './Firebase';
+import {get, push, set, getDatabase, ref} from 'firebase/database';
+
 
 
 function Main({profile1}){
-    const [url, setURL] = useState('');
-
-    let data = async(e)=>{
+    const [data, setData] = useState();
+    const [count, setCount] = useState();
     
-        const file = e.target.files[0];
-      //  let db = getDatabase(app);
-      //  const newref = push(ref(db, 'profile/'));
     
-        const imageref = ref(storage, `files/${file.name}`);
-        const listall = ref(storage, 'files/');
-        uploadBytes(imageref, file);
-        const img = await listAll(listall);
-        const urls = await Promise.all(
-            img.items.map((item) => getDownloadURL(item))
-          );
-          console.log(urls);
-        
-      /**   set(newref, {
-            name: 'snkd',
-            img: file
-        }).then(()=>{
-            alert('successfully updated');
-        })
-        const dataref = ref(db, 'profile/');
+    useEffect( async()=>{
+        let db = getDatabase(app);
+        const dataref = ref(db, 'projects/');
         const snapshot = await get(dataref);
        
             console.log(Object.values(snapshot.val()));
-        */
-      await getDownloadURL(imageref).then((url1)=>{
-        console.log(url1)
-        setURL(url1)
-       }).catch((err)=>{
-        switch (err.code) {
-            case 'storage/object-not-found':
-              // File doesn't exist
-              break;
-            case 'storage/unauthorized':
-              // User doesn't have permission to access the object
-              break;
-            case 'storage/canceled':
-              // User canceled the upload
-              break;
+            setData(Object.values(snapshot.val()));
+            console.log(data)
       
-            // ...
-      
-            case 'storage/unknown':
-              // Unknown error occurred, inspect the server response
-              break;
-          }
-       })
+
+    },[])
+    let project = (e) =>{
+        console.log(e)
+        document.getElementById(e).classList.add('slides1');
+        
       
 
     }
-   
+    let projects = (e)=>{
+        document.getElementById(e).classList.remove('slides1');
         
-      /**   set(newref, {
-            name: 'snkd',
-            img: file
+       
+      
+
+    }
+    
+    let swiperslide = ()=>{
+       
+        return(
+            <>
+            {data?data.map((item)=>(
+                <SwiperSlide className='swiper-slide rounded-xl border h-60 '  >
+                <div className=' h-60  rounded-xl' onMouseOver={() =>project(item.name)} onMouseOut={()=>projects(item.name)}><div className='flex justify-center  items-center project2 rounded-xl' id ={item.name} >{item.name}</div><img src = {item.img[1]} className='h-full object-cover rounded-xl'/></div></SwiperSlide>
+                
+                
+                
+            )):''}
+               
+            </>
+        )
+       
+    }
+    let submit  = ()=>{
+        let form = document.forms['form'];
+        let name = form.name.value;
+        let email = form.email.value;
+        let phone = form.phone.value;
+        let description = form.description.value;
+        let db = getDatabase(app);
+        const dataref = ref(db, `users/${name}`);
+        set(dataref, {
+            name: name,
+            email: email,
+            phone: phone,
+            description: description
         }).then(()=>{
             alert('successfully updated');
         })
-        const dataref = ref(db, 'profile/');
-        const snapshot = await get(dataref);
-       
-            console.log(Object.values(snapshot.val()));
-        */
-   
-      
-
-    
-    let project = () =>{
-        console.log('heldkl')
-        document.querySelector('.project2').classList.remove('slides2');
-        document.querySelector('.project2').classList.add('slides1');
-      
-
     }
-    let project1 = ()=>{
-        document.querySelector('.project2').classList.remove('slides1');
-        document.querySelector('.project2').classList.add('slides2');
 
-    }
    
     
     
@@ -258,17 +240,9 @@ function Main({profile1}){
         <div className='projects' id = "projects">
         <h1>My Projects</h1>
         <div className=' max-md:hidden slide1'>
-       
+      {swiperslide()}
         <Swiper className='swiper max-md:hidden' pagination = {{clickable: true}} modules={[Pagination,Navigation]} slidesPerView={3} spaceBetween={30} >
-            <SwiperSlide className='swiper-slide rounded-xl border h-64 ' >
-            <div className=' h-64  rounded-xl' onMouseOver={project} onMouseOut={project1}><div className='border flex justify-center  items-center project2 rounded-xl' >food order websit</div><img src = {p1} className='h-full object-cover rounded-xl'/></div></SwiperSlide>
-            <SwiperSlide className='swiper-slide ' > <div className=' h-64 border rounded-sm' onMouseOver={project} onMouseOut={project1}><div className='border flex justify-center  items-center project2' >food order websit</div><img src = {p1} className='h-full object-cover'/></div></SwiperSlide>
-            <SwiperSlide className='swiper-slide'> <div className=' h-64 border rounded-sm' onMouseOver={project} onMouseOut={project1}><div className='border flex justify-center  items-center project2' >food order websit</div><img src = {p1} className='h-full object-cover'/></div></SwiperSlide>
-            <SwiperSlide className='swiper-slide '> <div className=' h-64 border rounded-sm' onMouseOver={project} onMouseOut={project1}><div className='border flex justify-center  items-center project2' >food order websit</div><img src = {p1} className='h-full object-cover'/></div></SwiperSlide>
-            <SwiperSlide className='swiper-slide'><div className=' h-64 border rounded-sm' onMouseOver={project} onMouseOut={project1}><div className='border flex justify-center  items-center project2' >food order websit</div><img src = {p1} className='h-full object-cover'/></div></SwiperSlide>
-            <SwiperSlide className='swiper-slide '><div className=' h-64 border rounded-sm' onMouseOver={project} onMouseOut={project1}><div className='border flex justify-center  items-center project2' >food order websit</div><img src = {p1} className='h-full object-cover'/></div></SwiperSlide>
-            <SwiperSlide className='swiper-slide'><div className=' h-64 border rounded-sm' onMouseOver={project} onMouseOut={project1}><div className='border flex justify-center  items-center project2' >food order websit</div><img src = {p1} className='h-full object-cover'/></div></SwiperSlide>
-            <SwiperSlide className='swiper-slide '><div className=' h-64 border rounded-sm' onMouseOver={project} onMouseOut={project1}><div className='border flex justify-center  items-center project2' >food order websit</div><img src = {p1} className='h-full object-cover'/></div></SwiperSlide>
+        
             
         </Swiper>
 
@@ -308,7 +282,8 @@ function Main({profile1}){
             <h1 className='text-4xl '>Get in Touch</h1>
             <p className='text-4xl '>Contact Us </p>
          </div>
-         <form  className=' w-96 p-3 col-md'>
+         <div className='col-md  w-96 form'>
+         <form  className=' w-96 p-3' name = "form">
             <div className=''>
                 <i className='fa fa-user'></i><input type='text' name = "name" placeholder='name'/>
             </div>
@@ -318,22 +293,17 @@ function Main({profile1}){
             <div>
                 <i className='fa fa-phone'></i><input type='phone' name = "phone" placeholder='phone'/>
             </div>
-            <textarea type='text' name = "description" placeholder='text' rows={3} cols={49}  className=' mt-9 rounded-xl border-orange-300 ' ></textarea>
-            <button>Send</button>
+            <textarea type='text' name = "description" placeholder='text' rows={3} cols={46}  className=' mt-9 rounded-xl border-orange-300 ' ></textarea>
+         
          </form>
+         <button onClick={submit}>Send</button>
 
          </div>
          
+         </div>
+         
       
-         <div className = "border">
-            <form   encType="multipart/form-data">
-                <input type = "file" onChange={data}/>
-            </form>
-        </div>
-        <img src = {url}/>
-    
-     
-
+        
       
         
        </>

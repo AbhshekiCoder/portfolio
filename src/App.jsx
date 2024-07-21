@@ -9,11 +9,12 @@ import About from './Components/About';
 import Project from './Components/Project';
 import './App.css'
 import Admin from './Components/Admin';
+import Vlog from './Components/Vlog';
 
 
 function App() {
   const [toggle, setToggle] = useState("white");
-  const [item, setItem] = useState("");
+  
     
   let mode = ()=>{
       if(toggle == "white"){
@@ -48,15 +49,15 @@ function App() {
     <>
     <div className= '  maincontainer h-full'  style={{backgroundColor: toggle == 'white'?'white':'black', color: toggle == 'white'?'black':'white'}}>
         
-    <Navbar profile1={toggle} mode={mode}/>
+    <Navbar Profile1={toggle} mode={mode}/>
     <Routes>
-      <Route path ='/' element = {<Main profile1 = {toggle}/>}></Route>
-      <Route path ='/About' element = {<About profile1={toggle}/>} ></Route>
-      <Route path ='/Project' element = {<Project profile1={toggle}/>} ></Route>
+      <Route path ='/' element = {<Main Profile1 = {toggle}/>}></Route>
+      <Route path ='/About' element = {<About Profile1 = {toggle}/>} ></Route>
+      <Route path ='/Project' element = {<Project Profile1 = {toggle}/>} ></Route>
       <Route path ='/Admin' element = {<Admin/>} ></Route>
-     
+      <Route path ='/Vlog' element = {<Vlog Profile1={toggle}/>} ></Route>
     </Routes>
-    <img src ={item} />
+   
 
    
    

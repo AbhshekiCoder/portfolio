@@ -60,22 +60,23 @@ function Admin(){
         let db = getDatabase(app);
         const newref = push(ref(db, 'projects/'));
         set(newref, {
-            name: 'foody',
-            img: ['https://firebasestorage.googleapis.com/v0/b/portolioproject-85b16.appspot.com/o/projects%2Ffoody%2F127.0.0.1_foodapp_index.php%20-%20Google%20Chrome%202023-06-07%2012-21-57.mp4?alt=media&token=66c09325-80bd-46d8-bbff-77dfe45f256f']
+            name: 'linked clone',
+            img: ['https://firebasestorage.googleapis.com/v0/b/portolioproject-85b16.appspot.com/o/projects%2Flinkedin%2F127.0.0.1_5500_likuioinfgfj.html%20-%20Google%20Chrome%202023-12-16%2023-24-08.mp4?alt=media&token=269048b6-fedc-4611-a39f-2f80e154e4bd']
         }).then(()=>{
             alert('successfully updated');
         })
         const dataref = ref(db, 'projects/');
         const snapshot = await get(dataref);
+        setURL(Object.values(snapshot.val()));
        
             console.log(Object.values(snapshot.val()));
       
 
     }
-     
-    
-    useEffect(async()=>{
-        const listall = ref(storage, 'projects/cocoons');
+      /** 
+            
+     const db = async()=>{
+      const listall = ref(storage, 'projects/pglife');
       
         const img = await listAll(listall);
         const urls = await Promise.all(
@@ -84,8 +85,12 @@ function Admin(){
           console.log(urls);
          
 
-    },[])
+     }
     
+    useEffect(()=>{
+      db()
+    })
+      */
     
     
    
@@ -97,8 +102,16 @@ function Admin(){
             </form>
         
         </div>
-        <button onClick={btn}>click</button>
-     
+       <button onClick={btn}>
+       btn
+
+       </button>
+       <div>
+        {url?url.map((item)=>(
+          <div>{item}</div>
+
+        )): ''}
+       </div>
        
        
     

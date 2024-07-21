@@ -16,12 +16,10 @@ import {get, push, set, getDatabase, ref} from 'firebase/database';
 
 
 
-function Main({profile1}){
+function Main({Profile1}){
     const [data, setData] = useState();
-    const [count, setCount] = useState();
-    
-    
-    useEffect( async()=>{
+   
+    const db = async()=>{
         let db = getDatabase(app);
         const dataref = ref(db, 'projects/');
         const snapshot = await get(dataref);
@@ -29,6 +27,10 @@ function Main({profile1}){
             console.log(Object.values(snapshot.val()));
             setData(Object.values(snapshot.val()));
             console.log(data)
+    }
+    useEffect( ()=>{
+        db();
+       
       
 
     },[])
@@ -52,8 +54,8 @@ function Main({profile1}){
         return(
             <>
             {data?data.map((item)=>(
-                <SwiperSlide className='swiper-slide rounded-xl border h-60 '  >
-                <div className=' h-60  rounded-xl' onMouseOver={() =>project(item.name)} onMouseOut={()=>projects(item.name)}><div className='flex justify-center  items-center project2 rounded-xl' id ={item.name} >{item.name}</div><img src = {item.img[1]} className='h-full object-cover rounded-xl'/></div></SwiperSlide>
+                <SwiperSlide className='swiper-slide  ml-3 rounded-xl  '  >
+                <div className='  rounded-xl' onMouseOver={() =>project(item.name)} onMouseOut={()=>projects(item.name)}><div className='flex justify-center  items-center project2 rounded-xl'  id ={item.name} >{item.name}</div><img src = {item.img[1]} className='h-full object-cover rounded-xl '/></div></SwiperSlide>
                 
                 
                 
@@ -88,9 +90,9 @@ function Main({profile1}){
       
         <>
        
-        <div className="main-container " style={{backgroundColor: profile1 == 'white'?'white':'black', color: profile1 == 'white'?'black':'white'}}>
+        <div className="main-container " style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
         <div className='flex'>
-        <div className="details">
+        <div className="details" style={{fontFamily: "poppins"}}>
             <h1>Hy Iam</h1>
             
             <p>Aditiya Singh</p>
@@ -98,7 +100,7 @@ function Main({profile1}){
           
             
             <div  className="detail mt-3 text-gray-600 w-96 max-md:w-72 ">
-                <div style ={{color: profile1 == 'white'?'grey':'white'}} > Fullstack Web devloper with high skills and project delevier experience in many project of company</div>
+                <div style ={{color: Profile1 == 'white'?'grey':'white'}} > Fullstack Web devloper with high skills and project delevier experience in many project of company</div>
                 <button><Link to = '/About'>More</Link></button>
             </div>
         </div>
@@ -114,16 +116,16 @@ function Main({profile1}){
         <i className="fa-brands fa-github text-4xl text-orange-400 rounded-circle "></i>
         </div>
         <div data-aos = "fade-down" className='rounded-circle'>
-        <i class="fa-brands fa-linkedin text-4xl text-orange-400 rounded-circle "></i>
+        <i className="fa-brands fa-linkedin text-4xl text-orange-400 rounded-circle "></i>
         </div>
         <div data-aos = "fade-down" className='rounded-circle'>
-        <i class="fa-brands fa-facebook text-4xl text-orange-400 rounded-circle"></i>
+        <i className="fa-brands fa-facebook text-4xl text-orange-400 rounded-circle"></i>
         </div>
         <div data-aos = "fade-down" className='rounded-circle'>
-        <i class="fa-brands fa-instagram text-4xl text-orange-400 rounded-circle "></i>
+        <i className="fa-brands fa-instagram text-4xl text-orange-400 rounded-circle "></i>
         </div>
         <div data-aos = "fade-down" className='rounded-circle'>
-        <i class="fa-brands fa-whatsapp text-4xl text-orange-400 rounded-circle"></i>
+        <i className="fa-brands fa-whatsapp text-4xl text-orange-400 rounded-circle"></i>
         </div>
 
 
@@ -133,32 +135,32 @@ function Main({profile1}){
 
         </div>
         <div className='row skills'  id = "skills">
-        <div className = "col-md skill">
+        <div className = "col-md skill  " style ={{fontFamily: "poppins", fontSize: "18px"}}>
         <h1>Technicals Skills</h1>
-        <p>I Have Web development technologies with HTML, Javascript, CSS, PHP, Node.js, React, Mongo, Java, C/C++,DSA
+        <p>I Have Web development technologies with HTML5, Javascript, CSS5, PHP, Node.js, React, Mongo, Java, C/C++,MY SQL, Firebase, Vanilla Javascript,Tailwind CSS
         </p>
 
         </div>
-        <div className='col-md skill1'>
+        <div className='col-md skill1  '>
         <div className='rounded-circle bg3 '>
         <div className='rounded-circle skill1'>
-        <i class="fa-brands fa-html5"></i>
+        <i className="fa-brands fa-html5"></i>
 
         </div>
         <div className='rounded-circle skill2'>
-        <i class="fa-brands fa-php"></i>
+        <i className="fa-brands fa-php"></i>
 
          </div>
          <div className='rounded-circle skill3'>
-         <i class="fa-brands fa-react"></i>
+         <i className="fa-brands fa-react"></i>
 
         </div>
          <div className='rounded-circle skill4'>
-         <i class="fa-brands fa-node"></i>
+         <i className="fa-brands fa-node"></i>
 
          </div>
          <div className='rounded-circle skill5'>
-         <i class="fa-brands fa-js"></i>
+         <i className="fa-brands fa-js"></i>
 
          </div>
 
@@ -184,7 +186,7 @@ function Main({profile1}){
 
 </div>
 
-        <div className='services z-10 row' style={{backgroundColor: profile1 == 'white'?'white':'black', color: profile1 == 'white'?'black':'white'}}>
+        <div className='services z-10 row ' style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
         <div className = "col-md z-10">
         <h1>My Awesome </h1>
         <p>Services</p>
@@ -197,7 +199,7 @@ function Main({profile1}){
        
 
         </div>
-        <div className = "col-md card" style={{backgroundColor: profile1 == 'white'?'white':'black', color: profile1 == 'white'?'black':'white'}}>
+        <div className = "col-md card " style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
         <div className='card3 absolute'  >
         <div className=' flex justify-center'>
         <i class="fa-solid fa-face-laugh-wink text-yellow-400"></i>
@@ -237,12 +239,12 @@ function Main({profile1}){
             
         </div>
 
-        <div className='projects' id = "projects">
+        <div className='projects ' id = "projects">
         <h1>My Projects</h1>
-        <div className=' max-md:hidden slide1'>
-      {swiperslide()}
-        <Swiper className='swiper max-md:hidden' pagination = {{clickable: true}} modules={[Pagination,Navigation]} slidesPerView={3} spaceBetween={30} >
-        
+        <div className=' max-md:hidden slide1 '>
+      
+        <Swiper className='swiper max-md:hidden ' pagination = {{clickable: true}} modules={[Pagination,Navigation]} slidesPerView={3} spaceBetween={30} >
+        {swiperslide()}
             
         </Swiper>
 
@@ -252,7 +254,7 @@ function Main({profile1}){
        
        
         <div className='hidden swiper1'>
-        <Swiper className='swiper2 hidden max-md:block ' pagination = {{clickable: true}} modules={[Pagination,Navigation]} slidesPerView={1} spaceBetween={30} >
+        <Swiper className='swiper2 hidden ' pagination = {{clickable: true}} modules={[Pagination,Navigation]} slidesPerView={1} spaceBetween={30} >
         <SwiperSlide className='swiper-slide'><img src = {p1} className=''/></SwiperSlide>
             <SwiperSlide className='swiper-slide '><img src = {cocoons} className=''/></SwiperSlide>
             <SwiperSlide className='swiper-slide'><img src = {foody} className=''/></SwiperSlide>
@@ -277,23 +279,23 @@ function Main({profile1}){
       
       
         </div>
-         <div className='register row' id = "contact" >
+         <div className='register row max-md:w-full' id = "contact" >
          <div className = "col-md">
-            <h1 className='text-4xl '>Get in Touch</h1>
-            <p className='text-4xl '>Contact Us </p>
+            <h1 className='text-4xl max-md:text-3xl '>Get in Touch</h1>
+            <p className='text-4xl max-md:text-3xl'>Contact Us </p>
          </div>
-         <div className='col-md  w-96 form'>
+         <div className='col-md  w-96 form' data-aos = "fade-down">
          <form  className=' w-96 p-3' name = "form">
             <div className=''>
                 <i className='fa fa-user'></i><input type='text' name = "name" placeholder='name'/>
             </div>
             <div>
-            <i class="fa-regular fa-envelope"></i><input type='email' name = "email" placeholder='email'/>
+            <i className="fa-regular fa-envelope"></i><input type='email' name = "email" placeholder='email'/>
             </div>
             <div>
                 <i className='fa fa-phone'></i><input type='phone' name = "phone" placeholder='phone'/>
             </div>
-            <textarea type='text' name = "description" placeholder='text' rows={3} cols={46}  className=' mt-9 rounded-xl border-orange-300 ' ></textarea>
+            <textarea type='text' name = "description" placeholder='text'   className=' mt-9 rounded-xl border-orange-300 ' ></textarea>
          
          </form>
          <button onClick={submit}>Send</button>

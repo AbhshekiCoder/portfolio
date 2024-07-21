@@ -1,7 +1,7 @@
-function About({profile1}){
+function About({Profile1}){
     return(
         <>
-        <div className="w-full  flex justify-center items-center About" style={{backgroundColor: profile1 == 'white'?'white':'black', color: profile1 == 'white'?'black':'white'}}>
+        <div className="w-full  flex justify-center items-center About" style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
         <div className="about">
         <div className="about1" data-aos = "fade-right">
             <h1> About Me</h1>

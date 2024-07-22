@@ -153,7 +153,7 @@ color: orange;
     display: none;
   }
   .navbar-item>ul>li{
-    margin-left: 20px;
+    margin-left: 15px;
     font-size: 16px;
   }
   .btn{
@@ -566,15 +566,19 @@ color: orange;
 
 }
 .slide{
-  max-width: 800px;
+  max-width: 900px;
  
   height: 420px;
   padding-bottom: 10px;
   border-radius: 20px 20px;
   
 }
+.swiper{
+  max-width: 900px;
+ 
+}
 .swiper-slide1{
-  max-width: 800px;
+  max-width: 900px;
   height: 400px;
   border: solid 2px orange;
   border-radius: 20px 20px;
@@ -707,7 +711,7 @@ color: orange;
   max-width: 800px;
   margin: auto;
   margin-top: 50px;
-  border: solid 2px;
+ 
 }
 .register>div>h1{
   color: #fdc50f;
@@ -783,7 +787,18 @@ color: orange;
   background-color: orange;
 
 }
-
+.projects1>div{
+  background-color:  rgba(81, 81, 219, 0.548);
+  color: white;
+  z-index: 999;
+  position: absolute;
+  height: 0;
+ 
+  overflow: hidden;
+  transition-delay: 1s ;
+  font-size: 20px;
+  border-radius: 10px 10px;
+}
 @media(max-width: 768px){
   .skills{
     margin-left: 0%;

@@ -48,14 +48,44 @@ function Main({Profile1}){
       
 
     }
+    let project1 = (e) =>{
+      
+        document.getElementById(e).classList.add('slides1');
+        
+      
+
+    }
+    let projects1 = (e)=>{
+        document.getElementById(e).classList.remove('slides1');
+        
+       
+      
+
+    }
     
     let swiperslide = ()=>{
        
         return(
             <>
             {data?data.map((item)=>(
-                <SwiperSlide className='swiper-slide  ml-3 rounded-xl  '  >
+                <SwiperSlide className='swiper-slide  ml-3 rounded-xl  max-md:ml-0 '  >
                 <div className='  rounded-xl' onMouseOver={() =>project(item.name)} onMouseOut={()=>projects(item.name)}><div className='flex justify-center  items-center project2 rounded-xl'  id ={item.name} >{item.name}</div><img src = {item.img[1]} className='h-full object-cover rounded-xl '/></div></SwiperSlide>
+                
+                
+                
+            )):''}
+               
+            </>
+        )
+       
+    }
+    let swiperslide1 = ()=>{
+       
+        return(
+            <>
+            {data?data.map((item)=>(
+                <SwiperSlide className='swiper-slide  ml-3 rounded-xl  max-md:ml-0 '  >
+                <div className='  rounded-xl' onMouseOver={() =>project1(item.id)} onMouseOut={()=>projects1(item.id)}><div className='flex justify-center  items-center project2 rounded-xl'  id ={item.id} >{item.name}</div><img src = {item.img[1]} className='h-full object-cover rounded-xl '/></div></SwiperSlide>
                 
                 
                 
@@ -113,7 +143,8 @@ function Main({Profile1}){
         </div>
         <div className='icon flex' >
         <div data-aos = "fade-down" className='rounded-circle' >
-        <i className="fa-brands fa-github text-4xl text-orange-400 rounded-circle "></i>
+        <a href = "https://github.com/AbhshekiCoder/portfolio"> <i className="fa-brands fa-github text-4xl text-orange-400 rounded-circle "></i></a>
+       
         </div>
         <div data-aos = "fade-down" className='rounded-circle'>
         <i className="fa-brands fa-linkedin text-4xl text-orange-400 rounded-circle "></i>
@@ -188,8 +219,8 @@ function Main({Profile1}){
 
         <div className='services z-10 row ' style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
         <div className = "col-md z-10">
-        <h1>My Awesome </h1>
-        <p>Services</p>
+        <h1 className='text-sm '>My Awesome </h1>
+        <p className=' text-lg'>Services</p>
         <p1 >we provided related to web development, Backend, Fullstack, UI/UX design, editing,
         seo</p1>
         <div>
@@ -240,7 +271,7 @@ function Main({Profile1}){
         </div>
 
         <div className='projects ' id = "projects">
-        <h1>My Projects</h1>
+        <h1  className='max-md:text-2xl'>My Projects</h1>
         <div className=' max-md:hidden slide1 '>
       
         <Swiper className='swiper max-md:hidden ' pagination = {{clickable: true}} modules={[Pagination,Navigation]} slidesPerView={3} spaceBetween={30} >
@@ -254,15 +285,9 @@ function Main({Profile1}){
        
        
         <div className='hidden swiper1'>
-        <Swiper className='swiper2 hidden ' pagination = {{clickable: true}} modules={[Pagination,Navigation]} slidesPerView={1} spaceBetween={30} >
-        <SwiperSlide className='swiper-slide'><img src = {p1} className=''/></SwiperSlide>
-            <SwiperSlide className='swiper-slide '><img src = {cocoons} className=''/></SwiperSlide>
-            <SwiperSlide className='swiper-slide'><img src = {foody} className=''/></SwiperSlide>
-            <SwiperSlide className='swiper-slide '><img src = {bg1} className=''/></SwiperSlide>
-            <SwiperSlide className='swiper-slide'><img src = {bg1} className=''/></SwiperSlide>
-            <SwiperSlide className='swiper-slide '><img src = {bg1} className=''/></SwiperSlide>
-            <SwiperSlide className='swiper-slide'><img src = {bg1} className=''/></SwiperSlide>
-            <SwiperSlide className='swiper-slide '><img src = {bg1} className=''/></SwiperSlide>
+        <Swiper className='swiper2 hidden max-md:block ' pagination = {{clickable: true}} modules={[Pagination,Navigation]} slidesPerView={1} spaceBetween={30} >
+        
+            {swiperslide1()}
             
         </Swiper>
 
@@ -281,8 +306,8 @@ function Main({Profile1}){
         </div>
          <div className='register row max-md:w-full' id = "contact" >
          <div className = "col-md">
-            <h1 className='text-4xl max-md:text-3xl '>Get in Touch</h1>
-            <p className='text-4xl max-md:text-3xl'>Contact Us </p>
+            <h1 className='text-4xl max-md:text-2xl '>Get in Touch</h1>
+            <p className='text-4xl max-md:text-2xl'>Contact Us </p>
          </div>
          <div className='col-md  w-96 form' data-aos = "fade-down">
          <form  className=' w-96 p-3' name = "form">

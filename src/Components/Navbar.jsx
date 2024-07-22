@@ -33,11 +33,9 @@ function Navbar({Profile1, mode}){
                        <a href = "#projects">Projects</a>
                     </li>
                     <li>
-                       <a href='#skills'>Skills</a>
+                        <Link to = "/Vlog">Vlog</Link>
                     </li>
-                    <li>
-                        
-                    </li>
+                   
                 </ul>
             </div>
             <button className='btn  border '><a href = "#contact">Contact 

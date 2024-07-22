@@ -34,6 +34,16 @@ function Vlog({Profile1}){
          })
         
     }
+    let product = (e)=>{
+        document.getElementById(e).style.height = "176px";
+
+
+    }
+    let product1 = (e)=>{
+        document.getElementById(e).style.height = "0px";
+
+
+    }
     return(
         <>
         <div className="  w-full h-full" style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
@@ -470,14 +480,21 @@ function Vlog({Profile1}){
         </div>
 
         <div className="work mt-11 w-full">
-        <div className=" max-w-5xl m-auto border">
+        <div className=" max-w-5xl m-auto ">
         <p className="flex justify-center text-orange-400 font-bold"> My Portfoilo</p>
         <h1 className="text-2xl text-orange-600 font-bold flex justify-center mt-3"> Recent Works</h1>
-        <div className="flex flex-wrap mt-5">
+        <div className="grid grid-cols-3 mt-5 border gap-3 max-md:grid-cols-1 max-md:pl-3">
         {data?data.map((item)=>(
-            <div className="border  max-w-80  h-44  rounded-xl object-cover ml-5 mt-3" key = {item.name}>
-            <img src = {item.img[1]} className="h-full w-full rounded-xl "/>
-        </div>
+            <div className=" max-w-80  h-44  rounded-xl object-cover  projects1" key = {item.name}>
+            <div className=" h-44 w-80 text-white font-bold text-2xl  " id = {item.name}>
+            
+            <div className="flex justify-center mt-5"><Link to = "/Project"><i class="fa-solid fa-up-right-and-down-left-from-center text-white"></i></Link></div>
+            <div className="flex justify-center">{item.name}</div>
+          
+
+            </div>
+            <img src = {item.img[1]} className="h-full w-full rounded-xl"  onMouseOver={()=>product(item.name)} onMouseOut={()=>product1(item.name)}/>
+           </div>
 
         )):''}
         

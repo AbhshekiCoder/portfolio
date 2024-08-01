@@ -147,13 +147,13 @@ color: orange;
 @media(max-width: 768px){
   .navbar-item{
    margin-right: 5%;
-
+  
   }
   .form-check{
     display: none;
   }
   .navbar-item>ul>li{
-    margin-left: 15px;
+    margin-left: 10px;
     font-size: 16px;
   }
   .btn{
@@ -737,7 +737,6 @@ color: orange;
 .register>.form>form>div>input{
   width: 90%;
   height: 100%;
-  border: solid 2px;
   
   
   

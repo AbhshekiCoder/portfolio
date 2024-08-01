@@ -10,14 +10,14 @@ function Navbar({Profile1, mode}){
     
     return(
         <>
-        <div className='navbar flex items-center sticky-top' style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
-            <Link className='text-xl text-blue-500 font-bold ml-24 logo border w-fit max-md:ml-9 max-sm:ml-6 max-sm:text-sm' to = "/">Portfolio</Link>
+        <div className='navbar  flex items-center sticky-top' style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
+            <Link className='text-xl text-blue-500 font-bold ml-24 logo  w-fit max-md:ml-9 max-sm:ml-6 max-sm:text-sm' to = "/">Portfolio</Link>
             <div className="form-check form-switch border max-md:block max-md:absolute">
   <input className="form-check-input taxt-2xl" type="checkbox" role="switch" id="flexSwitchCheckDefault"  onClick={mode}/>{Profile1 == 'white'?<i className="fa-solid fa-sun text-yellow-400"></i>:<i className="fa-solid fa-moon text-white"></i>}
              </div>
             <div className='navbar-item'>
                 <ul type = "none">
-                    <li>
+                    <li className = "">
                     <Link to = '/'>
                      Home
                     </Link>
@@ -38,7 +38,7 @@ function Navbar({Profile1, mode}){
                    
                 </ul>
             </div>
-            <button className='btn  border '><a href = "#contact">Contact 
+            <button className='btn  '><a href = "#contact">Contact 
             Us</a>
             </button>
         </div>

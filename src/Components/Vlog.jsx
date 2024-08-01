@@ -483,7 +483,7 @@ function Vlog({Profile1}){
         <div className=" max-w-5xl m-auto ">
         <p className="flex justify-center text-orange-400 font-bold"> My Portfoilo</p>
         <h1 className="text-2xl text-orange-600 font-bold flex justify-center mt-3"> Recent Works</h1>
-        <div className="grid grid-cols-3 mt-5 border gap-3 max-md:grid-cols-1 max-md:pl-3">
+        <div className="grid grid-cols-3 mt-5 gap-3 max-md:grid-cols-1 max-md:pl-3">
         {data?data.map((item)=>(
             <div className=" max-w-80  h-44  rounded-xl object-cover  projects1" key = {item.name}>
             <div className=" h-44 w-80 text-white font-bold text-2xl  " id = {item.name}>

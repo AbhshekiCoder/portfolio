@@ -13,7 +13,7 @@ import Vlog from './Components/Vlog';
 
 
 function App() {
-  const [toggle, setToggle] = useState("white");
+  const [toggle, setToggle] = useState("black");
   
     
   let mode = ()=>{

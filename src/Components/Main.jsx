@@ -120,8 +120,8 @@ function Main({Profile1}){
       
         <>
        
-        <div className="main-container " style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
-        <div className='flex'>
+        <div className="main-container  " style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
+        <div className='flex max-md:w-full'>
         <div className="details" style={{fontFamily: "poppins"}}>
             <h1>Hy Iam</h1>
             
@@ -129,19 +129,19 @@ function Main({Profile1}){
            
           
             
-            <div  className="detail mt-3 text-gray-600 w-96 max-md:w-72 ">
+            <div  className="detail mt-3 text-gray-600 w-96 max-md:w-72  ">
                 <div style ={{color: Profile1 == 'white'?'grey':'white'}} > Fullstack Web devloper with high skills and project delevier experience in many project of company</div>
                 <button><Link to = '/About'>More</Link></button>
             </div>
         </div>
-        <div className="image rounded-circle border max-md:absolute ">
+        <div className="image rounded-circle  max-md:absolute ">
             <img src = {bg1} className=" rounded-circle"/>
-             </div>
+         </div>
         
             
 
         </div>
-        <div className='icon flex' >
+        <div className='icon flex  max-md:ml-0 ' >
         <div data-aos = "fade-down" className='rounded-circle' >
         <a href = "https://github.com/AbhshekiCoder/portfolio"> <i className="fa-brands fa-github text-4xl text-orange-400 rounded-circle "></i></a>
        
@@ -165,15 +165,15 @@ function Main({Profile1}){
 
 
         </div>
-        <div className='row skills'  id = "skills">
-        <div className = "col-md skill  " style ={{fontFamily: "poppins", fontSize: "18px"}}>
+        <div className='row skills  max-md:w-full'  id = "skills">
+        <div className = "col-md skill " style ={{fontFamily: "poppins", fontSize: "18px"}}>
         <h1>Technicals Skills</h1>
         <p>I Have Web development technologies with HTML5, Javascript, CSS5, PHP, Node.js, React, Mongo, Java, C/C++,MY SQL, Firebase, Vanilla Javascript,Tailwind CSS
         </p>
 
         </div>
-        <div className='col-md skill1  '>
-        <div className='rounded-circle bg3 '>
+        <div className='col-md skill1   '>
+        <div className='rounded-circle bg3  '>
         <div className='rounded-circle skill1'>
         <i className="fa-brands fa-html5"></i>
 
@@ -213,14 +213,12 @@ function Main({Profile1}){
 
       </div>
         </div>
-        <div className = "bg">
-
-</div>
+       
 
         <div className='services z-10 row ' style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
-        <div className = "col-md z-10">
-        <h1 className='text-sm '>My Awesome </h1>
-        <p className=' text-lg'>Services</p>
+        <div className = "col-md z-10 ">
+        <h1 className=' '>My Awesome </h1>
+        <p className=' '>Services</p>
         <p1 >we provided related to web development, Backend, Fullstack, UI/UX design, editing,
         seo</p1>
         <div>
@@ -230,8 +228,8 @@ function Main({Profile1}){
        
 
         </div>
-        <div className = "col-md card " style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
-        <div className='card3 absolute'  >
+        <div className = "col-md card  " style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
+        <div className='card3 absolute '  >
         <div className=' flex justify-center'>
         <i class="fa-solid fa-face-laugh-wink text-yellow-400"></i>
         </div>
@@ -243,7 +241,7 @@ function Main({Profile1}){
 
         </div>
 
-        <div className='card1 ' data-aos = "fade-right">
+        <div className='card1  ' data-aos = "fade-right">
         <div className=' flex justify-center'>
         <i class="fa-solid fa-face-grin-wink text-yellow-400"></i>
         </div>
@@ -270,7 +268,7 @@ function Main({Profile1}){
             
         </div>
 
-        <div className='projects ' id = "projects">
+        <div className='projects  ' id = "projects">
         <h1  className='max-md:text-2xl'>My Projects</h1>
         <div className=' max-md:hidden slide1 '>
       
@@ -303,8 +301,8 @@ function Main({Profile1}){
       
       
       
-        </div>
-         <div className='register row max-md:w-full' id = "contact" >
+        
+         <div className='register row max-md:w-ful ' id = "contact" >
          <div className = "col-md">
             <h1 className='text-4xl max-md:text-2xl '>Get in Touch</h1>
             <p className='text-4xl max-md:text-2xl'>Contact Us </p>
@@ -328,7 +326,7 @@ function Main({Profile1}){
          </div>
          
          </div>
-         
+         </div>
       
         
       

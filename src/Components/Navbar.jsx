@@ -18,22 +18,22 @@ function Navbar({Profile1, mode}){
             <div className='navbar-item'>
                 <ul type = "none">
                     <li className = "">
-                    <Link to = '/'>
+                    <Link to = '/' className=' max-md:text-sm '>
                      Home
                     </Link>
                        
                     </li>
                     <li>
-                    <Link to = '/About'>
+                    <Link to = '/About' className=' max-md:text-sm '>
                         About
                     </Link>
                     </li>
                     
                     <li>
-                       <a href = "#projects">Projects</a>
+                       <a href = "#projects" className=' max-md:text-sm '>Projects</a>
                     </li>
                     <li>
-                        <Link to = "/Vlog">Vlog</Link>
+                        <Link to = "/Vlog" className=' max-md:text-sm '>Vlog</Link>
                     </li>
                    
                 </ul>

@@ -152,9 +152,10 @@ color: orange;
   .form-check{
     display: none;
   }
-  .navbar-item>ul>li{
+  .navbar-item>ul>li>Link{
     margin-left: 10px;
-    font-size: 16px;
+    font-size: 12px;
+    border: solid 2px;
   }
   .btn{
     font-size: 14px;

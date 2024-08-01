@@ -229,7 +229,7 @@ function Main({Profile1}){
 
         </div>
         <div className = "col-md card  " style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
-        <div className='card3 absolute '  >
+        <div className='card3 absolute h-fit  '  >
         <div className=' flex justify-center'>
         <i class="fa-solid fa-face-laugh-wink text-yellow-400"></i>
         </div>
@@ -241,17 +241,17 @@ function Main({Profile1}){
 
         </div>
 
-        <div className='card1  ' data-aos = "fade-right">
-        <div className=' flex justify-center'>
+        <div className='card1 h-fit ' data-aos = "fade-right">
+        <div className=' flex justify-center '>
         <i class="fa-solid fa-face-grin-wink text-yellow-400"></i>
         </div>
-        <div className='flex justify-center mt-3 '>UI UX Design</div>
+        <div className='flex justify-center mt-3  '>UI UX Design</div>
         <div className='flex justify-center mt-3  text-gray-400 w-full  pl-5 max-md:text-sm max-md:mt-2'>figma, photoshope Adobe, Adobe xd </div>
        <a href = "#" className=' flex justify-center text-blue-300  max-md:text-sm max-md:mt-'>Learn More</a>
 
 
         </div>
-        <div className='card2' >
+        <div className='card2 h-fit' >
         <div className=' flex justify-center'>
         <i class="fa-solid fa-face-laugh-wink text-yellow-400"></i>
         </div>

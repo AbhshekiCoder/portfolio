@@ -120,7 +120,9 @@ function Main({Profile1}){
       
         <>
        
-        <div className="main-container  " style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
+        <div className="main-container 
+        
+         " style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
         <div className='flex max-md:w-full'>
         <div className="details" style={{fontFamily: "poppins"}}>
             <h1>Hy Iam</h1>
@@ -141,7 +143,7 @@ function Main({Profile1}){
             
 
         </div>
-        <div className='icon flex  max-md:ml-0 ' >
+        <div className='icon flex  max-md:ml-0  ' >
         <div data-aos = "fade-down" className='rounded-circle' >
         <a href = "https://github.com/AbhshekiCoder/portfolio"> <i className="fa-brands fa-github text-4xl text-orange-400 rounded-circle "></i></a>
        
@@ -165,10 +167,10 @@ function Main({Profile1}){
 
 
         </div>
-        <div className='row skills  max-md:w-full'  id = "skills">
-        <div className = "col-md skill " style ={{fontFamily: "poppins", fontSize: "18px"}}>
-        <h1>Technicals Skills</h1>
-        <p>I Have Web development technologies with HTML5, Javascript, CSS5, PHP, Node.js, React, Mongo, Java, C/C++,MY SQL, Firebase, Vanilla Javascript,Tailwind CSS
+        <div className='row skills  max-md:w-full '  id = "skills">
+        <div className = "col-md skill  " style ={{fontFamily: "poppins", fontSize: "18px"}}>
+        <h1 className=''>Technicals Skills</h1>
+        <p className=''>I Have Web development technologies with HTML5, Javascript, CSS5, PHP, Node.js, React, Mongo, Java, C/C++,MY SQL, Firebase, Vanilla Javascript,Tailwind CSS
         </p>
 
         </div>
@@ -217,7 +219,7 @@ function Main({Profile1}){
 
         <div className='services z-10 row ' style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
         <div className = "col-md z-10 ">
-        <h1 className=' '>My Awesome </h1>
+        <h1 className=''>My Awesome </h1>
         <p className=' '>Services</p>
         <p1 >we provided related to web development, Backend, Fullstack, UI/UX design, editing,
         seo</p1>
@@ -234,7 +236,7 @@ function Main({Profile1}){
         <i class="fa-solid fa-face-laugh-wink text-yellow-400"></i>
         </div>
         <div className='flex justify-center mt-3 '>Content Creator</div>
-        <div className='flex justify-center mt-3  text-gray-400 w-full  pl-5'>Web Design, Web devlopment, Seo </div>
+        <div className='flex justify-center mt-3   text-gray-400 w-full max-md:text-xs  pl-5'>Web Design, Web devlopment, Seo </div>
        <a href = "#" className=' flex justify-center text-blue-300'>Learn More</a>
 
 
@@ -246,7 +248,7 @@ function Main({Profile1}){
         <i class="fa-solid fa-face-grin-wink text-yellow-400"></i>
         </div>
         <div className='flex justify-center mt-3  '>UI UX Design</div>
-        <div className='flex justify-center mt-3  text-gray-400 w-full  pl-5 max-md:text-sm max-md:mt-2'>figma, photoshope Adobe, Adobe xd </div>
+        <div className='flex justify-center mt-3  text-gray-400 w-full  pl-5 max-md:text-xs max-md:mt-2'>figma, photoshope Adobe, Adobe xd </div>
        <a href = "#" className=' flex justify-center text-blue-300  max-md:text-sm max-md:mt-'>Learn More</a>
 
 
@@ -256,7 +258,7 @@ function Main({Profile1}){
         <i class="fa-solid fa-face-laugh-wink text-yellow-400"></i>
         </div>
         <div className='flex justify-center mt-3 '>Web Developer</div>
-        <div className='flex justify-center mt-3  text-gray-400 w-full  pl-5   max-md:mt-2'>Web Design, Web devlopment, Seo </div>
+        <div className='flex justify-center mt-3  text-gray-400 w-full  pl-5 max-md:text-xs max-md:mt-2'>Web Design, Web devlopment, Seo </div>
        <a href = "#" className=' flex justify-center text-blue-300  max-md:text-sm max-md:mt-'>Learn More</a>
 
 

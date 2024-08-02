@@ -247,6 +247,10 @@ color: orange;
   width: 200px;
   color: grey;
 }
+.skill>p{
+  
+  width: 500px;
+}
 .skill-role{
   
   margin-left: 60%;
@@ -753,7 +757,7 @@ color: orange;
 }
 .register>.form>form>textarea{
    border: solid 2px orange;
-   width: 90%;
+   width: 80%;
 }
 .register>.form>button{
   padding:  5px 10px 5px 10px;
@@ -803,6 +807,13 @@ color: orange;
   .skills{
     margin-left: 0%;
    
+  }
+  .skill>h1{
+    font-size: 26px;
+  }
+  .skill>p{
+    font-size: 15px;
+    width: 300px;
   }
   .bg3{
     margin-left: 50px;
@@ -940,7 +951,15 @@ color: orange;
   .register>.form>form>div{
     max-width: 300px;
   }
-  
+  .services>.col-md>h1{
+    font-size: 26px;
+  }
+  .services>.col-md>p{
+    font-size: 26px;
+  }
+  .services>.col-md>p1{
+    font-size: 15px;
+  }
   
   
   

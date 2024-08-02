@@ -15,7 +15,7 @@ function Navbar({Profile1, mode}){
             <div className="form-check form-switch border max-md:block max-md:absolute">
   <input className="form-check-input taxt-2xl" type="checkbox" role="switch" id="flexSwitchCheckDefault"  onClick={mode}/>{Profile1 == 'white'?<i className="fa-solid fa-sun text-yellow-400"></i>:<i className="fa-solid fa-moon text-white"></i>}
              </div>
-            <div className='navbar-item'>
+            <div className='navbar-item '>
                 <ul type = "none">
                     <li className = "">
                     <Link to = '/' className=' max-md:text-sm '>

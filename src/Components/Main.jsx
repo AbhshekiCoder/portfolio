@@ -13,7 +13,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import {app, storage} from './Firebase';
 import {get, push, set, getDatabase, ref} from 'firebase/database';
-
+import pdf from '../images/Purple and White Clean and Professional Resume.pdf';
 
 
 function Main({Profile1}){
@@ -145,11 +145,14 @@ function Main({Profile1}){
         </div>
         <div className='icon flex  max-md:ml-0  ' >
         <div data-aos = "fade-down" className='rounded-circle' >
-        <a href = "https://github.com/AbhshekiCoder/portfolio"> <i className="fa-brands fa-github text-4xl text-orange-400 rounded-circle "></i></a>
+        <a href = "https://github.com/AbhshekiCoder"> <i className="fa-brands fa-github text-4xl text-orange-400 rounded-circle "></i></a>
        
         </div>
         <div data-aos = "fade-down" className='rounded-circle'>
+        <a href = "https://www.linkedin.com/in/abhishek-gour-cs-a981b224b">
         <i className="fa-brands fa-linkedin text-4xl text-orange-400 rounded-circle "></i>
+        </a>
+      
         </div>
         <div data-aos = "fade-down" className='rounded-circle'>
         <i className="fa-brands fa-facebook text-4xl text-orange-400 rounded-circle"></i>
@@ -158,7 +161,8 @@ function Main({Profile1}){
         <i className="fa-brands fa-instagram text-4xl text-orange-400 rounded-circle "></i>
         </div>
         <div data-aos = "fade-down" className='rounded-circle'>
-        <i className="fa-brands fa-whatsapp text-4xl text-orange-400 rounded-circle"></i>
+        <a href = "https://wa.link/c9zrjn">  <i className="fa-brands fa-whatsapp text-4xl text-orange-400 rounded-circle"></i></a>
+      
         </div>
 
 
@@ -224,7 +228,7 @@ function Main({Profile1}){
         <p1 >we provided related to web development, Backend, Fullstack, UI/UX design, editing,
         seo</p1>
         <div>
-        <button className='rounded-sm bg-orange-400 text-white w-40'>Download CV</button>
+        <button className='rounded-sm bg-orange-400 text-white w-40'><a href = {pdf} download='Purple and White Clean and Professional Resume.pdf'>Download CV</a></button>
 
         </div>
        

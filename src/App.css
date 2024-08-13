@@ -5,12 +5,10 @@
   align-items: center;
   box-shadow:  0px 0px 10px grey;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  justify-content: space-between;
   
 }
-.navbar-item{
-  
-  margin-right: 10%;
-}
+
 .navbar-item>ul>li{
   float: left;
   margin-left: 40px;
@@ -145,6 +143,9 @@ color: orange;
 
 
 @media(max-width: 768px){
+  .navbar{
+    height: fit-content;
+  }
   .navbar-item{
    margin-right: 5%;
   
@@ -803,7 +804,7 @@ color: orange;
   font-size: 20px;
   border-radius: 10px 10px;
 }
-@media(max-width: 768px){
+@media(max-width: 768px ){
   .skills{
     margin-left: 0%;
    

@@ -1,5 +1,5 @@
-import bg1 from '../images/bg1.png';
-import {Swiper, SwiperSlide} from  'swiper/react';
+import bg1 from '../images/user.webp';
+import {SwiperSlide, Swiper} from 'swiper/react';
 import 'swiper/css';
 import 'swiper/swiper-bundle.css';
 import 'swiper/css/pagination';
@@ -112,9 +112,8 @@ function Main({Profile1}){
             alert('successfully updated');
         })
     }
-
-   
     
+   
     
     return(
       
@@ -174,7 +173,7 @@ function Main({Profile1}){
         <div className='row skills  max-md:w-full '  id = "skills">
         <div className = "col-md skill  " style ={{fontFamily: "poppins", fontSize: "18px"}}>
         <h1 className=''>Technicals Skills</h1>
-        <p className=''>I Have Web development technologies with HTML5, Javascript, CSS5, PHP, Node.js, React, Mongo, Java, C/C++,MY SQL, Firebase, Vanilla Javascript,Tailwind CSS
+        <p className=''>Versatile web developer with expertise in building dynamic and responsive applications using modern technologies like MERN stack, React, PHP, Node.js, MySQLi, Firebase, and MongoDB. Proficient in front-end design with Tailwind, Bootstrap, Vanilla JavaScript, HTML, and CSS, and experienced in back-end development with Express.js. Dedicated to creating seamless user experiences and scalable solutions.
         </p>
 
         </div>
@@ -225,7 +224,7 @@ function Main({Profile1}){
         <div className = "col-md z-10 ">
         <h1 className=''>My Awesome </h1>
         <p className=' '>Services</p>
-        <p1 >we provided related to web development, Backend, Fullstack, UI/UX design, editing,
+        <p1 >we provided service related to web development, Backend, Fullstack, UI/UX design
         seo</p1>
         <div>
         <button className='rounded-sm bg-orange-400 text-white w-40'><a href = {pdf} download='Purple and White Clean and Professional Resume.pdf'>Download CV</a></button>
@@ -235,7 +234,7 @@ function Main({Profile1}){
 
         </div>
         <div className = "col-md card  " style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
-        <div className='card3 absolute h-fit  '  >
+        <div className='card3 absolute h-fit   '   >
         <div className=' flex justify-center'>
         <i class="fa-solid fa-face-laugh-wink text-yellow-400"></i>
         </div>
@@ -247,7 +246,7 @@ function Main({Profile1}){
 
         </div>
 
-        <div className='card1 h-fit ' data-aos = "fade-right">
+        <div className='card1 h-fit  '  data-aos = "fade-right">
         <div className=' flex justify-center '>
         <i class="fa-solid fa-face-grin-wink text-yellow-400"></i>
         </div>

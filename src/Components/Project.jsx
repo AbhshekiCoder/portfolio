@@ -112,10 +112,9 @@ function Project({Profile1}){
         </div>
         <div className='description2' data-aos = "fade-down"  style={{color:Profile1=='white'?'grey':'white'}}>
         <div className='flex justify-center text-2xl font-bold' style={{color:Profile1=='white'?'black':'white'}}>
-           Technologies used
+           Technologies used:
         </div>
-        Technologies Used:
-    
+          {item.technologies_used}
         </div>
        
 

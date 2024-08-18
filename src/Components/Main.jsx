@@ -126,7 +126,7 @@ function Main({Profile1}){
         <div className="details" style={{fontFamily: "poppins"}}>
             <h1>Hy Iam</h1>
             
-            <p>Aditiya Singh</p>
+            <p>Abhishek Gour</p>
            
           
             
@@ -170,7 +170,7 @@ function Main({Profile1}){
 
 
         </div>
-        <div className='row skills  max-md:w-full border '  id = "skills">
+        <div className='row skills  max-md:w-full '  id = "skills">
         <div className = "col-md skill  " style ={{fontFamily: "poppins", fontSize: "18px"}}>
         <h1 className=''>Technicals Skills</h1>
         <p className=''>Versatile web developer with expertise in building dynamic and responsive applications using modern technologies like MERN stack, React, PHP, Node.js, MySQLi, Firebase, and MongoDB. Proficient in front-end design with Tailwind, Bootstrap, Vanilla JavaScript, HTML, and CSS, and experienced in back-end development with Express.js. Dedicated to creating seamless user experiences and scalable solutions.
@@ -221,7 +221,7 @@ function Main({Profile1}){
        
 
         <div className='services z-10 row ' style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
-        <div className = "col-md z-10  borders">
+        <div className = "col-md z-10 s">
         <h1 className=''>My Awesome </h1>
         <p className=' '>Services</p>
         <p1 >we provided service related to web development, Backend, Fullstack, UI/UX design
@@ -233,7 +233,7 @@ function Main({Profile1}){
        
 
         </div>
-        <div className = "col-md card  border" style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
+        <div className = "col-md card  " style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
         <div className='card3 absolute h-fit   '   >
         <div className=' flex justify-center'>
         <i class="fa-solid fa-face-laugh-wink text-yellow-400"></i>
@@ -273,7 +273,7 @@ function Main({Profile1}){
             
         </div>
 
-        <div className='projects border ' id = "projects">
+        <div className='projects ' id = "projects">
         <h1  className='max-md:text-2xl'>My Projects</h1>
         <div className=' max-md:hidden slide1 '>
       
@@ -307,7 +307,7 @@ function Main({Profile1}){
       
       
         
-         <div className='register row max-md:w-ful border ' id = "contact" >
+         <div className='register row max-md:w-ful ' id = "contact" >
          <div className = "col-md">
             <h1 className='text-4xl max-md:text-2xl '>Get in Touch</h1>
             <p className='text-4xl max-md:text-2xl'>Contact Us </p>
@@ -323,7 +323,7 @@ function Main({Profile1}){
             <div>
                 <i className='fa fa-phone'></i><input type='phone' name = "phone" placeholder='phone'/>
             </div>
-            <textarea type='text' name = "description" placeholder='text'   className=' mt-9 rounded-xl border-orange-300 ' ></textarea>
+            <textarea type='text' name = "description" placeholder='text'   className=' mt-9 rounded-xl-orange-300 ' ></textarea>
          
          </form>
          <button onClick={submit}>Send</button>

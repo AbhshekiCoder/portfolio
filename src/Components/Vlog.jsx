@@ -73,7 +73,7 @@ function Vlog({Profile1}){
         <div className="details max-md:ml-9" style={{fontFamily: "poppins"}}>
             <h1>Hy Iam</h1>
             
-            <p>Aditiya Singh</p>
+            <p>Abhishek Gour</p>
            
           
             

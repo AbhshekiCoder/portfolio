@@ -12,7 +12,7 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   justify-content: space-between;
   width: 100%;
-  border: solid 2px;
+  
   
 }
 
@@ -750,6 +750,7 @@ color: orange;
 .register>.form>form>div>input{
   width: 90%;
   height: 100%;
+  color: black;
   
   
   
@@ -766,6 +767,7 @@ color: orange;
 .register>.form>form>textarea{
    border: solid 2px orange;
    width: 80%;
+   color: black;
 }
 .register>.form>button{
   padding:  5px 10px 5px 10px;

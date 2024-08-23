@@ -179,23 +179,23 @@ function Main({Profile1}){
         </div>
         <div className='col-md skill1   '>
         <div className='rounded-circle bg3  '>
-        <div className='rounded-circle skill1'>
-        <i className="fa-brands fa-html5"></i>
+        <div className='rounded-circle skill1 border rounded1'>
+        <i className="fa-brands fa-html5 " ></i>
 
         </div>
-        <div className='rounded-circle skill2'>
+        <div className='rounded-circle skill2 rounded1'>
         <i className="fa-brands fa-php"></i>
 
          </div>
-         <div className='rounded-circle skill3'>
+         <div className='rounded-circle skill3 rounded1'>
          <i className="fa-brands fa-react"></i>
 
         </div>
-         <div className='rounded-circle skill4'>
+         <div className='rounded-circle skill4 rounded1'>
          <i className="fa-brands fa-node"></i>
 
          </div>
-         <div className='rounded-circle skill5'>
+         <div className='rounded-circle skill5 rounded1'>
          <i className="fa-brands fa-js"></i>
 
          </div>
@@ -206,10 +206,10 @@ function Main({Profile1}){
         </div>
         <div className='skill-role w-fit h-fit'>
        
-        <div className='rounded-circle bg1'>
+        <div className='rounded-circle bg1 background'>
         
          </div>
-        <div className='rounded-circle bg2'>
+        <div className='rounded-circle bg2 background'>
 
         </div> 
         

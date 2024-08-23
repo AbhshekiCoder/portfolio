@@ -988,4 +988,27 @@ color: orange;
 ::-webkit-scrollbar{
   display: none;
 }
+.rounded1{
+  animation: rotate1 4s infinite;
+ }
+ @keyframes rotate1{
+   0%{
+     transform: rotate(0deg);
+   }
+   100%{
+     transform: rotate(-360deg);
+   }
+ }
+ .background{
+  animation: rotate2 4s infinite;
+
+ }
+ @keyframes rotate2{
+  0%{
+    transform: rotateX(0deg);
+  }
+  100%{
+    transform: rotateX(360deg);
+  }
+}
 

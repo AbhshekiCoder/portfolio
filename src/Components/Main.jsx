@@ -220,7 +220,7 @@ function Main({Profile1}){
         </div>
        
 
-        <div className='services z-10 row ' style={{Color: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
+        <div className='services z-10 row ' style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
         <div className = "col-md z-10 s">
         <h1 className=''>My Awesome </h1>
         <p className=' '>Services</p>

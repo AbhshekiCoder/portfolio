@@ -78,7 +78,7 @@ function Vlog({Profile1}){
           
             
             <div  className="detail mt-3 text-gray-600 w-96 max-md:w-72 ">
-                <div style ={{color: Profile1 == 'white'?'grey':'white'}} > Fullstack Web devloper with high skills and project delevier experience in many project of company</div>
+                <div style ={{color: Profile1 == 'white'?'grey':'white'}} > Fullstack Web developer with high skills and project deliver experience in many project of company</div>
                 <button><Link to = '/About'>More</Link></button>
             </div>
         </div>
@@ -280,7 +280,7 @@ function Vlog({Profile1}){
                     <img src = {bg1} className="h-full w-5 "/>
                     </div>
                     <div className="ml-6  h-full">
-                       <div className=" text-orange-400 font-bold text-xl max-md:text-lg">Btech in Computer Science</div> 
+                       <div className=" text-orange-400 font-bold text-xl max-md:text-lg">B.Tech in Computer Science</div> 
                        <div className="mt-3 ">2020-2024</div>
                     </div>
                 </div>
@@ -363,10 +363,10 @@ function Vlog({Profile1}){
        </div>
        <div className="border content  mt-3">
        <div className="text-orange-600 pl-5 mt-5 font-bold text-2xl  flex justify-center max-md:text-sm max-md:pl-3  ">
-           Web Devloping
+           Web Developing
        </div>
        <div className="pl-5 text-gray-500 mt-3 p-2  w-72 max-sm:text-sm max-md:w-36">
-          we provides web devlopment services 
+          we provides web development services 
        </div>
 
        </div>
@@ -389,7 +389,7 @@ function Vlog({Profile1}){
            deployment Services
        </div>
        <div className="pl-5 text-gray-500 mt-3 p-2  w-72 max-sm:text-sm max-md:w-36">
-           we provided an deployment and maintainance
+           we provided an deployment and maintenance
        </div>
 
        </div>
@@ -455,11 +455,11 @@ function Vlog({Profile1}){
        </div>
        <div className="border content  mt-3">
        <div className="text-orange-600 pl-5 mt-5 font-bold text-2xl max-md:text-sm max-md:p-2">
-       Android devloping
+       Android developing
          
        </div>
        <div className="pl-5 text-gray-500 mt-3 p-2  w-72 max-sm:text-sm max-md:w-36">
-        we providing Android devloping
+        we providing Android developing
        </div>
 
        </div>
@@ -481,7 +481,7 @@ function Vlog({Profile1}){
 
         <div className="work mt-11 w-full">
         <div className=" max-w-5xl m-auto ">
-        <p className="flex justify-center text-orange-400 font-bold"> My Portfoilo</p>
+        <p className="flex justify-center text-orange-400 font-bold"> My Portfolio</p>
         <h1 className="text-2xl text-orange-600 font-bold flex justify-center mt-3"> Recent Works</h1>
         <div className="grid grid-cols-3 mt-5 gap-3 max-md:grid-cols-1 max-md:pl-3">
         {data?data.map((item)=>(

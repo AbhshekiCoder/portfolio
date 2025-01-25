@@ -121,7 +121,7 @@ function Main({Profile1}){
        
         <div className="main-container w-full
         
-         " style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
+         " style={{Color: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
         <div className='flex max-md:w-full'>
         <div className="details" style={{fontFamily: "poppins"}}>
             <h1>Hy Iam</h1>
@@ -131,7 +131,7 @@ function Main({Profile1}){
           
             
             <div  className="detail mt-3 text-gray-600 w-96 max-md:w-72  ">
-                <div style ={{color: Profile1 == 'white'?'grey':'white'}} > Fullstack Web devloper with high skills and project delevier experience in many project of company</div>
+                <div style ={{color: Profile1 == 'white'?'grey':'white'}} > Fullstack Web developer with high skills and project deliver experience in many project of company</div>
                 <button><Link to = '/About'>More</Link></button>
             </div>
         </div>
@@ -172,7 +172,7 @@ function Main({Profile1}){
         </div>
         <div className='row skills  max-md:w-full '  id = "skills">
         <div className = "col-md skill  " style ={{fontFamily: "poppins", fontSize: "18px"}}>
-        <h1 className=''>Technicals Skills</h1>
+        <h1 className=''>Technical Skills</h1>
         <p className=''>Versatile web developer with expertise in building dynamic and responsive applications using modern technologies like MERN stack, React, PHP, Node.js, MySQLi, Firebase, and MongoDB. Proficient in front-end design with Tailwind, Bootstrap, Vanilla JavaScript, HTML, and CSS, and experienced in back-end development with Express.js. Dedicated to creating seamless user experiences and scalable solutions.
         </p>
 
@@ -206,10 +206,10 @@ function Main({Profile1}){
         </div>
         <div className='skill-role w-fit h-fit'>
        
-        <div className='rounded-circle bg1 background'>
+        <div className='rounded-circle bg1 '>
         
          </div>
-        <div className='rounded-circle bg2 background'>
+        <div className='rounded-circle bg2 '>
 
         </div> 
         
@@ -220,7 +220,7 @@ function Main({Profile1}){
         </div>
        
 
-        <div className='services z-10 row ' style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
+        <div className='services z-10 row ' style={{Color: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
         <div className = "col-md z-10 s">
         <h1 className=''>My Awesome </h1>
         <p className=' '>Services</p>
@@ -233,13 +233,13 @@ function Main({Profile1}){
        
 
         </div>
-        <div className = "col-md card  " style={{backgroundColor: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
+        <div className = "col-md card  " style={{Color: Profile1 == 'white'?'white':'black', color: Profile1 == 'white'?'black':'white'}}>
         <div className='card3 absolute h-fit   '   >
         <div className=' flex justify-center'>
         <i class="fa-solid fa-face-laugh-wink text-yellow-400"></i>
         </div>
         <div className='flex justify-center mt-3 '>Content Creator</div>
-        <div className='flex justify-center mt-3   text-gray-400 w-full max-md:text-xs  pl-5'>Web Design, Web devlopment, Seo </div>
+        <div className='flex justify-center mt-3   text-gray-400 w-full max-md:text-xs  pl-5'>Web Design, Web development, Seo </div>
        <a href = "#" className=' flex justify-center text-blue-300'>Learn More</a>
 
 
@@ -251,7 +251,7 @@ function Main({Profile1}){
         <i class="fa-solid fa-face-grin-wink text-yellow-400"></i>
         </div>
         <div className='flex justify-center mt-3  '>UI UX Design</div>
-        <div className='flex justify-center mt-3  text-gray-400 w-full  pl-5 max-md:text-xs max-md:mt-2'>figma, photoshope Adobe, Adobe xd </div>
+        <div className='flex justify-center mt-3  text-gray-400 w-full  pl-5 max-md:text-xs max-md:mt-2'>figma, phonoscope Adobe, Adobe xd </div>
        <a href = "#" className=' flex justify-center text-blue-300  max-md:text-sm max-md:mt-'>Learn More</a>
 
 
@@ -261,7 +261,7 @@ function Main({Profile1}){
         <i class="fa-solid fa-face-laugh-wink text-yellow-400"></i>
         </div>
         <div className='flex justify-center mt-3 '>Web Developer</div>
-        <div className='flex justify-center mt-3  text-gray-400 w-full  pl-5 max-md:text-xs max-md:mt-2'>Web Design, Web devlopment, Seo </div>
+        <div className='flex justify-center mt-3  text-gray-400 w-full  pl-5 max-md:text-xs max-md:mt-2'>Web Design, Web development, Seo </div>
        <a href = "#" className=' flex justify-center text-blue-300  max-md:text-sm max-md:mt-'>Learn More</a>
 
 

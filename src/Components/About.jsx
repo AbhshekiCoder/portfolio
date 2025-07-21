@@ -20,11 +20,12 @@ function About({ Profile1 }) {
         <div data-aos="fade-right">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 text-orange-500">About Me</h1>
           <p className="text-lg leading-relaxed">
-            Welcome to <span className="font-semibold">Coding Craft</span>, where creativity meets code!
-            We are a dynamic web solutions agency driven by passion, innovation, and a commitment to
-            excellence. With over <span className="font-semibold">20 successfully delivered projects</span>,
-            we specialize in empowering businesses with cutting-edge digital solutions that blend
-            functionality and aesthetics.
+          I'm a passionate and results-driven Full-Stack Web Developer dedicated to transforming ideas into interactive, high-performing digital experiences.
+With over 20 successfully delivered projects for clients across various industries, I specialize in building modern, scalable, and aesthetically pleasing web solutions that seamlessly blend functionality with design.
+
+Whether it's a dynamic business website, an admin dashboard, or a custom application — I bring clean code, smooth animations, and solid architecture to every line I write.
+
+
           </p>
         </div>
 
@@ -32,11 +33,11 @@ function About({ Profile1 }) {
         <div data-aos="fade-left">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 text-orange-500">My Background</h1>
           <p className="text-lg leading-relaxed">
-            At Coding Craft, we are a team of talented developers, designers, and tech enthusiasts
-            dedicated to crafting bespoke digital experiences. Our mission is to help businesses
-            thrive in the digital landscape by providing tailored solutions that align with their
-            goals. Whether you're a startup or an enterprise, we bring your vision to life with
-            precision and care.
+          We’re a passionate team of developers, designers, and tech innovators committed to building custom web solutions that drive real results. Our mission is to empower businesses — from ambitious startups to growing enterprises — with scalable, high-performance, and beautifully designed digital products.
+
+With a focus on creativity, precision, and collaboration, we deliver solutions that don’t just meet your goals — they elevate your brand in today’s digital-first world.
+
+
           </p>
         </div>
 
@@ -66,8 +67,8 @@ function About({ Profile1 }) {
         {/* Call to Action */}
         <div data-aos="fade-up">
           <p className="mt-6 text-lg leading-relaxed">
-            Let’s collaborate to turn your ideas into reality! Partner with <span className="font-semibold text-orange-500">Coding Craft</span>,
-            and let us craft a digital presence that sets you apart.
+           🚀 Let’s turn your ideas into reality.
+Work with <span className="font-semibold text-orange-500">me</span> to build a digital presence that stands out.
           </p>
           <p className="mt-2 font-bold text-orange-400">Your vision, our craft – let's code the future together.</p>
         </div>

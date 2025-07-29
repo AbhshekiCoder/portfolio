@@ -19,18 +19,19 @@ function App() {
   
     
   let mode = ()=>{
-      if(toggle == "white"){
-          setToggle("black");
-          localStorage.setItem("mode1", "black");
+      if(toggle == "black"){
+          setToggle("white");
+          localStorage.setItem("mode1", "white");
           
       }
       else{
-        setToggle("white");
-        localStorage.setItem("mode1", "white");
+        setToggle("black");
+        localStorage.setItem("mode1", "black");
       }
   }
   let mode1 = localStorage.getItem("mode1");
   useEffect(()=>{
+    localStorage.setItem("mode1", "black")
     if(mode1 == "black"){
       setToggle("black");
       document.querySelector('.form-check-input').checked = true;
@@ -40,7 +41,7 @@ function App() {
       document.querySelector('.form-check-input').checked = false;
     }
 
-  },[])
+  },[mode1])
  
 // Create the object URL
 

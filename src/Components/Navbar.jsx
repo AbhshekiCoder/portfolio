@@ -89,7 +89,7 @@ function Navbar({ Profile1, mode }) {
                             {isMenuOpen ? (
                                 <i className="fas fa-times text-xl"></i>
                             ) : (
-                                <i className="fas fa-bars text-xl"></i>
+                                <i className="fas fa-bars text-xl pr-3"></i>
                             )}
                         </button>
                     </div>

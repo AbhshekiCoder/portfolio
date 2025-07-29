@@ -78,14 +78,18 @@ function Main({ Profile1 }) {
 
   // Skills data
   const skills = [
-    { icon: 'fa-html5', name: 'HTML5', level: 90 },
-    { icon: 'fa-css3-alt', name: 'CSS3', level: 85 },
-    { icon: 'fa-js', name: 'JavaScript', level: 80 },
-    { icon: 'fa-react', name: 'React', level: 85 },
-    { icon: 'fa-node-js', name: 'Node.js', level: 90 },
+    { icon: 'fa-html5', name: 'HTML5', level: 100 },
+    { icon: 'fa-css3-alt', name: 'CSS3', level: 100 },
+    { icon: 'fa-js', name: 'JavaScript', level: 100 },
+    { icon: 'fa-react', name: 'React', level: 100 },
+    { icon: 'fa-node-js', name: 'Node.js', level: 100 },
     { icon: 'fa-php', name: 'PHP', level: 70 },
-    { icon: 'fa-database', name: 'MongoDB', level: 75 },
-    { icon: 'nextjs', name: 'Next.js', level: 60 }
+    { icon: 'fa-database', name: 'MongoDB', level: 100 },
+    { icon: 'nextjs', name: 'Next.js', level: 90 },
+    {icon: 'typescript', name: 'Typescript', level: 90},
+    {icon: 'fa-firebase', name: 'Firebase', level: 100},
+    {icon: 'fa-express', name: 'Express.js', level: 100},
+    
   ];
 
   // Form submission for contact form

@@ -89,6 +89,9 @@ function Main({ Profile1 }) {
     {icon: 'typescript', name: 'Typescript', level: 90},
     {icon: 'fa-firebase', name: 'Firebase', level: 100},
     {icon: 'fa-express', name: 'Express.js', level: 100},
+    {icon: 'fa-database', name: 'SupaBase', level: 90},
+    {icon: 'fa-mysql', name: "MySQL", level: 90 },
+    {icon: 'fa-materialui', name:"Material UI", level: 90}
     
   ];
 
@@ -953,7 +956,7 @@ function Main({ Profile1 }) {
 
 
     
-   { /** 
+   {/**  
       <section className="submit-project py-20 px-4 md:px-8 lg:px-16" data-aos="fade-up">
   <div className="max-w-3xl mx-auto">
     <h2 className="text-3xl font-bold text-center mb-8">Submit Your Project</h2>
@@ -1023,10 +1026,10 @@ function Main({ Profile1 }) {
     </form>
   </div>
 </section>
+*/}
 
 
-*/
-}
+
 
     </>
     

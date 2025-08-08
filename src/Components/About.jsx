@@ -2,12 +2,17 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+
 function About({ Profile1 }) {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
   return (
+    <>
+  
+      <title>About</title>
+   
     <div
       className="w-full min-h-screen flex justify-center items-center px-4 md:px-16 py-20 transition-colors duration-500"
       style={{
@@ -74,6 +79,7 @@ Work with <span className="font-semibold text-orange-500">me</span> to build a d
         </div>
       </div>
     </div>
+    </>
   );
 }
 

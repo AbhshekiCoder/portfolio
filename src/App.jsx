@@ -11,6 +11,7 @@ import Project from './Components/Project';
 import Admin from './Components/Admin';
 import Vlog from './Components/Vlog';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -50,6 +51,7 @@ function App() {
 
   return (
     <>
+  
     <div className= '  maincontainer h-full'  style={{backgroundColor: toggle == 'white'?'white':'#0f172a', color: toggle == 'white'?'black':'white'}}>
         
     <Navbar Profile1={toggle} mode={mode}/>

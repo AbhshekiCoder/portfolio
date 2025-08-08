@@ -6,6 +6,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 import { useState, useEffect } from 'react';
 import { app } from './Firebase';
 import { getDatabase, ref, get } from 'firebase/database';
+import { FiExternalLink } from 'react-icons/fi'; // Import an external link icon
 
 function Project({ Profile1 }) {
   const [data, setData] = useState([]);
@@ -90,6 +91,45 @@ function Project({ Profile1 }) {
                 </p>
               </div>
             </div>
+            
+            {/* New URL Section */}
+            {item.link && (
+              <div className="mt-8 text-center" data-aos="fade-up">
+                <h3 className="text-xl font-semibold mb-2" style={{ color: isLight ? 'black' : '#90cdf4' }}>
+                  Project Link
+                </h3>
+                <a 
+                  href={item.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className={`
+                    inline-flex items-center px-4 py-2 rounded-lg transition-all duration-300
+                    ${isLight 
+                      ? 'bg-blue-500 hover:bg-blue-600 text-white' 
+                      : 'bg-blue-700 hover:bg-blue-800 text-white'}
+                  `}
+                >
+                  <FiExternalLink className="mr-2" />
+                  Visit Live Project
+                </a>
+                {item.github && (
+                  <a 
+                    href={item.github} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className={`
+                      inline-flex items-center ml-4 px-4 py-2 rounded-lg transition-all duration-300
+                      ${isLight 
+                        ? 'bg-gray-700 hover:bg-gray-800 text-white' 
+                        : 'bg-gray-800 hover:bg-gray-900 text-white'}
+                    `}
+                  >
+                    <FiExternalLink className="mr-2" />
+                    GitHub Repository
+                  </a>
+                )}
+              </div>
+            )}
           </div>
         ))
       ) : (

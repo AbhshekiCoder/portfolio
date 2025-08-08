@@ -150,6 +150,7 @@ function Main({ Profile1 }) {
 
   return (
     <>
+   
     <div 
       className="main-container w-full min-h-screen transition-colors duration-500 overflow-hidden"
       style={{ 
@@ -185,57 +186,100 @@ function Main({ Profile1 }) {
       </div>
 
       {/* Hero Section */}
-      <section className="hero-section relative overflow-hidden py-20 px-4 md:px-8 lg:px-16 flex flex-col md:flex-row items-center justify-between gap-12">
-        {/* Left Text Section */}
-        <motion.div
-          className="details w-full md:w-1/2 z-10"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
+     {/* Hero Section */}
+<section className="hero-section relative overflow-hidden py-20 px-4 md:px-8 lg:px-16 flex flex-col md:flex-row items-center justify-between gap-12">
+  {/* Left Text Section */}
+  <motion.div
+    className="details w-full md:w-1/2 z-10"
+    initial={{ opacity: 0, x: -50 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.8 }}
+  >
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.1 }}
+    >
+      <h1 className="text-2xl md:text-3xl font-light mb-2">Hi, I am</h1>
+      <motion.h2
+        className="text-4xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-pink-600"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3, duration: 1 }}
+      >
+        Abhishek Gour
+      </motion.h2>
+      
+      {/* New Bold Tagline */}
+      <motion.h3
+        className="text-2xl md:text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4, duration: 1 }}
+      >
+        Helping Brands Stand Out with Powerful Digital Solutions
+      </motion.h3>
+    </motion.div>
+    
+    <motion.div
+      className="detail mt-6 mb-8"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.6, duration: 1 }}
+    >
+      {/* Updated Description */}
+      <p className={`text-lg mb-6 ${Profile1 === 'white' ? 'text-gray-600' : 'text-gray-300'}`}>
+        Creative Fullstack Developer & Freelancer specializing in building high-performance web applications, 
+        eye-catching ad designs, and conversion-focused digital experiences that help businesses thrive.
+      </p>
+      
+      <div className="flex flex-wrap gap-4">
+        {/* New Primary CTA */}
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg shadow-lg hover:shadow-xl transition-all"
         >
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-          >
-            <h1 className="text-2xl md:text-3xl font-light mb-2">Hi, I am</h1>
-            <motion.h2
-              className="text-4xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-pink-600"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3, duration: 1 }}
-            >
-              Abhishek Gour
-            </motion.h2>
-          </motion.div>
-          
-          <motion.div
-            className="detail mt-6 mb-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6, duration: 1 }}
-          >
-            <p className={`text-lg mb-6 ${Profile1 === 'white' ? 'text-gray-600' : 'text-gray-300'}`}>
-              Fullstack Web Developer with expertise in building dynamic and responsive applications using modern technologies.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg shadow-lg hover:shadow-xl transition-all"
-              >
-                <Link to="/About">More About Me</Link>
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 border border-orange-500 text-orange-500 rounded-lg hover:bg-orange-500 hover:text-white transition-all"
-              >
-                <a href={pdf} download="Abhishek_Gour_Resume.pdf">Download CV</a>
-              </motion.button>
-            </div>
-          </motion.div>
-        </motion.div>
+          <a href="#contact">Hire Me for Your Project</a>
+        </motion.button>
+        
+        {/* Secondary CTA */}
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="px-6 py-3 border border-orange-500 text-orange-500 rounded-lg hover:bg-orange-500 hover:text-white transition-all"
+        >
+          <a href={pdf} download="Abhishek_Gour_Resume.pdf">Download CV</a>
+        </motion.button>
+        
+        {/* Tertiary CTA */}
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg shadow-lg hover:shadow-xl transition-all"
+        >
+          <Link to="/Project">View My Portfolio</Link>
+        </motion.button>
+      </div>
+      
+      {/* Social Proof */}
+      <motion.div 
+        className="mt-8 flex items-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.8, duration: 1 }}
+      >
+        <div className="flex -space-x-2 mr-4">
+          {[...Array(4)].map((_, i) => (
+            <div key={i} className="w-8 h-8 rounded-full bg-gray-300 border-2 border-white"></div>
+          ))}
+        </div>
+        <p className="text-sm text-gray-500 dark:text-gray-400">
+          Trusted by 15+ clients worldwide
+        </p>
+      </motion.div>
+    </motion.div>
+  </motion.div>
 
         {/* Rotating-on-hover Image Section */}
         <motion.div 
@@ -956,7 +1000,7 @@ function Main({ Profile1 }) {
 
 
     
-   {/**  
+   
       <section className="submit-project py-20 px-4 md:px-8 lg:px-16" data-aos="fade-up">
   <div className="max-w-3xl mx-auto">
     <h2 className="text-3xl font-bold text-center mb-8">Submit Your Project</h2>
@@ -1026,7 +1070,6 @@ function Main({ Profile1 }) {
     </form>
   </div>
 </section>
-*/}
 
 
 

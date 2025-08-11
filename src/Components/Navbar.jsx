@@ -26,7 +26,7 @@ function Navbar({ Profile1, mode }) {
                     <div className="hidden md:flex items-center space-x-8">
                         <nav className="flex space-x-6">
                             {['/', '/About', '/Project', '/Vlog'].map((path, i) => {
-                                const name = ['Home', 'About', 'Projects', 'Vlog'][i];
+                                const name = ['Home', 'About', 'Projects', 'Vlog', 'Testimonials'][i];
                                 return (
                                     <Link
                                         key={i}

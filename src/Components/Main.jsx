@@ -81,34 +81,62 @@ const getSkillIcon = (iconName, skillName) => {
       return <i className="fas fa-database text-xl text-blue-600"></i>;
     case 'nextjs':
       return (
-        <svg className="w-5 h-5" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4.5 4.5L4.905 4.095L7.5 6.695L10.095 4.095L10.5 4.5V4.5L7.5 7.5L4.5 4.5V4.5Z" fill="currentColor"/>
-          <path d="M10.5 10.5L10.095 10.905L7.5 8.305L4.905 10.905L4.5 10.5V10.5L7.5 7.5L10.5 10.5V10.5Z" fill="currentColor"/>
-          <path fillRule="evenodd" clipRule="evenodd" d="M7.5 0C3.35786 0 0 3.35786 0 7.5C0 11.6421 3.35786 15 7.5 15C11.6421 15 15 11.6421 15 7.5C15 3.35786 11.6421 0 7.5 0ZM1.5 7.5C1.5 4.18629 4.18629 1.5 7.5 1.5C10.8137 1.5 13.5 4.18629 13.5 7.5C13.5 10.8137 10.8137 13.5 7.5 13.5C4.18629 13.5 1.5 10.8137 1.5 7.5Z" fill="currentColor"/>
+        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18.665 21.978C16.758 23.255 14.465 24 12 24 5.377 24 0 18.623 0 12S5.377 0 12 0s12 5.377 12 12c0 3.583-1.574 6.801-4.067 9.001L9.219 7.2H7.2v9.596h1.615V9.251l9.85 12.727Zm-3.332-8.533 1.6 2.061V7.2h-1.6v6.245Z"/>
         </svg>
       );
     case 'typescript':
       return (
-        <svg className="w-5 h-5" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M13.5 1.5H1.5V13.5H13.5V1.5Z" stroke="currentColor" strokeWidth="1.5"/>
-          <path d="M6 9.5H4.5V6.5H6V7.25H4.5V8.75H6V9.5Z" fill="currentColor"/>
-          <path d="M10.5 9.5H9V8.75H10.5V8H9V6.5H10.5V7.25H11.25V6.5H12.75V8H11.25V8.75H12.75V9.5H11.25V10.25H10.5V9.5Z" fill="currentColor"/>
+        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M23.429 0H.57A.571.571 0 0 0 0 .571V23.43c0 .314.255.569.571.569H23.43a.571.571 0 0 0 .569-.569V.57A.571.571 0 0 0 23.43 0zm-9.143 12.826h-2.857v8.304H9.143v-8.304H6.286v-1.973h8zm.64 8.304v-1.66c.492.64 1.26 1.092 2.334 1.092 1.026 0 1.834-.352 2.334-1.026.4-.534.534-1.238.534-2.016v-5.768h-2.048v5.768c0 .352-.188.534-.534.534-.358 0-.534-.17-.534-.534v-5.768h-2.048v6.25c0 .982-.08 1.574-.534 2.126-.456.56-1.134.84-2.048.84-.908 0-1.672-.28-2.188-.84h-.04l.306-1.64c.492.44 1.026.774 1.868.774.492 0 .84-.174.84-.64 0-.224-.062-.426-.174-.64-.112-.214-.28-.426-.494-.64-.64-.64-1.172-1.334-1.172-2.334 0-1.026.534-1.92 1.334-2.334.8-.414 1.774-.44 2.668-.174.492.134.908.426 1.214.84h.04v-.84h2.048v2.334c0 .534.174.84.534.84.358 0 .534-.306.534-.84v-2.334h2.048v4.268c0 1.334-.28 2.334-1.6 3.054-1.054.574-2.454.64-3.494.24-1.04-.4-1.774-1.172-2.048-2.188l1.84-.44c.174.534.64.84 1.334.84.64 0 1.026-.306 1.026-.84 0-.306-.134-.534-.374-.72-.24-.188-.534-.334-.88-.44-.64-.24-1.214-.534-1.64-1.026-.426-.492-.64-1.146-.64-1.92 0-1.334.64-2.334 1.92-2.748 1.28-.414 2.668-.24 3.494.64.826.88.84 2.188.84 3.054v4.978h2.048v-1.6h-.04z"/>
         </svg>
       );
     case 'fa-firebase':
-      return <i className="fas fa-fire text-xl text-orange-500"></i>;
+      return (
+        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M3.89 15.672L6.255.461A.542.542 0 0 1 7.27.288l2.543 4.771zm16.794 3.692l-2.25-14a.54.54 0 0 0-.919-.295L3.316 19.365l7.856 4.427a1.621 1.621 0 0 0 1.588 0zM14.3 7.147l-1.82-3.482a.542.542 0 0 0-.96 0L3.53 17.984z"/>
+        </svg>
+      );
     case 'fa-express':
-      return <i className="fas fa-server text-xl text-gray-800 dark:text-white"></i>;
+      return (
+        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M24 18.588a1.529 1.529 0 0 1-1.895-.72l-3.45-4.771-.5-.667-4.003 5.444a1.466 1.466 0 0 1-1.802.708l5.158-6.92-4.798-6.251a1.595 1.595 0 0 1 1.9.666l3.576 4.83 3.596-4.81a1.435 1.435 0 0 1 1.788-.668L21.708 7.9l-2.522 3.283a.666.666 0 0 0 0 .994l4.804 6.412zM.002 11.576l.42-2.075c1.154-4.103 5.858-5.81 9.094-3.27 1.895 1.489 2.368 3.597 2.275 5.973H1.116C.943 16.447 4.005 19.009 7.92 17.7a4.078 4.078 0 0 0 2.582-2.876c.207-.666.548-.78 1.174-.588a5.417 5.417 0 0 1-2.589 3.957 6.272 6.272 0 0 1-7.306-.933 6.575 6.575 0 0 1-1.64-3.858c0-.235-.08-.455-.134-.666A88.33 88.33 0 0 1 0 11.577zm1.127-.286h9.654c-.06-3.076-2.001-5.258-4.59-5.278-2.882-.04-4.944 2.094-5.064 5.278z"/>
+        </svg>
+      );
     case 'fa-mysql':
-      return <i className="fas fa-database text-xl text-blue-500"></i>;
+      return (
+        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M16.208 3.182l-.005.002c-1.098.326-2.264.482-3.448.483-1.183 0-2.349-.157-3.448-.483l-.005-.002C5.887 2.382 4.142 3.67 4.142 5.273v1.358c0 .948.553 1.784 1.405 2.187 1.097.526 2.41.79 3.722.79 1.312 0 2.625-.264 3.722-.79.852-.403 1.405-1.239 1.405-2.187V5.273c0-1.603-1.745-2.891-4.188-2.091zm-4.188 5.338c-1.312 0-2.625-.264-3.722-.79-.852-.403-1.405-1.239-1.405-2.187V4.225c0-.948.553-1.784 1.405-2.187 1.097-.526 2.41-.79 3.722-.79 1.312 0 2.625.264 3.722.79.852.403 1.405 1.239 1.405 2.187v1.318c0 .948-.553 1.784-1.405 2.187-1.097.526-2.41.79-3.722.79z"/>
+          <path d="M16.208 8.546l-.005.002c-1.098.326-2.264.482-3.448.483-1.183 0-2.349-.157-3.448-.483l-.005-.002C5.887 7.746 4.142 9.034 4.142 10.637v1.358c0 .948.553 1.784 1.405 2.187 1.097.526 2.41.79 3.722.79 1.312 0 2.625-.264 3.722-.79.852-.403 1.405-1.239 1.405-2.187v-1.358c0-1.603-1.745-2.891-4.188-2.091zm-4.188 5.338c-1.312 0-2.625-.264-3.722-.79-.852-.403-1.405-1.239-1.405-2.187V9.589c0-.948.553-1.784 1.405-2.187 1.097-.526 2.41-.79 3.722-.79 1.312 0 2.625.264 3.722.79.852.403 1.405 1.239 1.405 2.187v1.318c0 .948-.553 1.784-1.405 2.187-1.097.526-2.41.79-3.722.79z"/>
+          <path d="M16.208 13.91l-.005.002c-1.098.326-2.264.482-3.448.483-1.183 0-2.349-.157-3.448-.483l-.005-.002C5.887 13.11 4.142 14.398 4.142 16.001v1.358c0 .948.553 1.784 1.405 2.187 1.097.526 2.41.79 3.722.79 1.312 0 2.625-.264 3.722-.79.852-.403 1.405-1.239 1.405-2.187V16c0-1.603-1.745-2.891-4.188-2.091zm-4.188 5.338c-1.312 0-2.625-.264-3.722-.79-.852-.403-1.405-1.239-1.405-2.187v-1.318c0-.948.553-1.784 1.405-2.187 1.097-.526 2.41-.79 3.722-.79 1.312 0 2.625.264 3.722.79.852.403 1.405 1.239 1.405 2.187v1.318c0 .948-.553 1.784-1.405 2.187-1.097.526-2.41.79-3.722.79z"/>
+        </svg>
+      );
     case 'fa-materialui':
       return (
-        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
           <path d="M0 2.475v10.39l3 1.733V7.67l6 3.465 6-3.465v3.465l-6 3.463v3.464l6 3.463 9-5.195V9.402l-3 1.733v3.463l-6 3.464-3-1.732 6-3.465V2.475L9 7.67 0 2.475zm24 0l-3 1.73V7.67l3-1.732V2.474z"/>
         </svg>
       );
     case 'fa-react-native':
       return <i className="fab fa-react text-xl text-blue-400"></i>;
+    case 'supabase':
+      return (
+        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21.362 9.354H12V.396a.396.396 0 0 0-.716-.233L2.203 12.424l-.401.562a1.04 1.04 0 0 0 .836 1.659H12v8.959a.396.396 0 0 0 .716.233l9.081-12.261.401-.562a1.04 1.04 0 0 0-.836-1.66z"/>
+        </svg>
+      );
+    case 'tailwind':
+      return (
+        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 6c-2.667 0-4.333 1.333-5 4 1-1.333 2.167-1.833 3.5-1.5.761.189 1.305.738 1.907 1.346C13.188 11.179 14.023 12 16 12c2.667 0 4.333-1.333 5-4-1 1.333-2.167 1.833-3.5 1.5-.761-.189-1.305-.738-1.907-1.346C14.812 6.821 13.977 6 12 6zm-5 6c-2.667 0-4.333 1.333-5 4 1-1.333 2.167-1.833 3.5-1.5.761.189 1.305.738 1.907 1.346C8.188 17.179 9.023 18 11 18c2.667 0 4.333-1.333 5-4-1 1.333-2.167 1.833-3.5 1.5-.761-.189-1.305-.738-1.907-1.346C9.812 12.821 8.977 12 7 12z"/>
+        </svg>
+      );
+    case 'bootstrap':
+      return (
+        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M11.77 11.24H9.956V8.202h2.152c1.17 0 1.834.522 1.834 1.466 0 1.008-.773 1.572-2.174 1.572zm.324 1.206H9.957v3.348h2.231c1.459 0 2.232-.585 2.232-1.685s-.795-1.663-2.326-1.663zM24 11.39v1.218c-1.128.108-1.817.944-2.226 2.268-.407 1.319-.463 2.937-.42 4.186.045 1.3-.968 2.5-2.337 2.5H4.985c-1.37 0-2.383-1.2-2.337-2.5.043-1.249-.013-2.867-.42-4.186-.41-1.324-1.1-2.16-2.228-2.268V11.39c1.128-.108 1.819-.944 2.227-2.268.408-1.319.464-2.937.42-4.186-.045-1.3.968-2.5 2.338-2.5h14.032c1.37 0 2.382 1.2 2.337 2.5-.043 1.249.013 2.867.42 4.186.409 1.324 1.098 2.16 2.226 2.268zm-7.927 2.044c.413-1.162 1.352-2.213 3.921-2.213 1.956 0 3.2.871 3.2 2.813 0 1.713-.982 2.665-2.481 2.76v.067c1.771.07 2.88 1.125 2.88 2.813 0 2.211-1.738 3.086-4.127 3.086-2.722 0-3.6-1.144-4.012-2.533h1.62c.308.835 1.086 1.418 2.392 1.418 1.5 0 2.24-.768 2.24-1.753 0-1.035-.74-1.685-2.24-1.685h-.872v-1.559h.872c1.355 0 2.24-.665 2.24-1.652 0-.91-.64-1.598-2.032-1.598-1.207 0-1.92.61-2.19 1.406h-1.645z"/>
+        </svg>
+      );
     default:
       return <i className="fas fa-code text-xl text-orange-500"></i>;
   }
@@ -128,6 +156,7 @@ const getSkillIcon = (iconName, skillName) => {
 
   // Skills data
 
+// Skills data
 const skills = [
   { icon: 'fa-html5', name: 'HTML5', level: 100 },
   { icon: 'fa-css3-alt', name: 'CSS3', level: 100 },
@@ -140,12 +169,13 @@ const skills = [
   { icon: 'typescript', name: 'Typescript', level: 90 },
   { icon: 'fa-firebase', name: 'Firebase', level: 100 },
   { icon: 'fa-express', name: 'Express.js', level: 100 },
-  { icon: 'fa-database', name: 'SupaBase', level: 90 },
+  { icon: 'supabase', name: 'SupaBase', level: 90 },
   { icon: 'fa-mysql', name: "MySQL", level: 90 },
   { icon: 'fa-materialui', name: "Material UI", level: 90 },
-  { icon: 'fa-react-native', name: "React Native", level: 100 }
+  { icon: 'fa-react-native', name: "React Native", level: 100 },
+  { icon: 'tailwind', name: "Tailwind CSS", level: 100 },
+  { icon: 'bootstrap', name: "Bootstrap", level: 100 }
 ];
-
   // Form submission for contact form
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -417,7 +447,7 @@ const skills = [
       </section>
 
       {/* Skills Section */}
-    // Skills Section
+    
 <section 
   id="skills" 
   className="skills-section py-20 px-4 md:px-8 lg:px-16"
@@ -444,7 +474,7 @@ const skills = [
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          Versatile web developer with expertise in building dynamic and responsive applications using modern technologies like MERN stack, React, PHP, Node.js, MySQLi, Firebase, and MongoDB. Proficient in front-end design with Tailwind, Bootstrap, Vanilla JavaScript, HTML, and CSS, Next.js, Typescript and experienced in back-end development with Express.js.
+        Full-Stack & Mobile App Developer skilled in MERN Stack, React, Next.js, PHP, Node.js, TypeScript, Firebase, MySQLi, and MongoDB. Experienced in front-end design with Tailwind, Bootstrap, JavaScript, HTML, CSS and back-end development using Express.js. Proficient in mobile app development with React Native, delivering scalable, user-friendly, and AI-powered solutions.
         </motion.p>
         
         <div className="mt-8 grid grid-cols-2 gap-4">
@@ -521,111 +551,136 @@ const skills = [
 
       {/* Services Section */}
       <section 
-        className="services-section py-20 px-4 md:px-8 lg:px-16"
-        style={{
-          backgroundColor: Profile1 === 'white' ? '#f8fafc' : '#1e293b',
-        }}
-        data-aos="fade-up"
+  className="services-section py-20 px-4 md:px-8 lg:px-16"
+  style={{
+    backgroundColor: Profile1 === 'white' ? '#f8fafc' : '#1e293b',
+  }}
+  data-aos="fade-up"
+>
+  <div className="max-w-6xl mx-auto">
+    <div className="text-center mb-16">
+      <motion.h2 
+        className="text-3xl md:text-4xl font-bold mb-2"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
       >
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <motion.h2 
-              className="text-3xl md:text-4xl font-bold mb-2"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              My Awesome
-            </motion.h2>
-            <motion.h3 
-              className="text-2xl md:text-3xl bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-pink-600"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-            >
-              Services
-            </motion.h3>
-            <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-pink-600 mx-auto mt-4"></div>
+        My Awesome
+      </motion.h2>
+      <motion.h3 
+        className="text-2xl md:text-3xl bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-pink-600"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+      >
+        Services
+      </motion.h3>
+      <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-pink-600 mx-auto mt-4"></div>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* Service Card 1 */}
+      <motion.div 
+        className="service-card p-8 rounded-xl shadow-lg hover:shadow-xl transition-all group"
+        style={{
+          backgroundColor: Profile1 === 'white' ? 'white' : '#334155',
+        }}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        whileHover={{ y: -10 }}
+      >
+        <div className="text-center mb-6">
+          <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-pink-100 dark:from-gray-700 dark:to-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <i className="fa-solid fa-code text-2xl text-orange-500"></i>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Service Card 1 */}
-            <motion.div 
-              className="service-card p-8 rounded-xl shadow-lg hover:shadow-xl transition-all group"
-              style={{
-                backgroundColor: Profile1 === 'white' ? 'white' : '#334155',
-              }}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              whileHover={{ y: -10 }}
-            >
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-pink-100 dark:from-gray-700 dark:to-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <i className="fa-solid fa-code text-2xl text-orange-500"></i>
-                </div>
-                <h3 className="text-xl font-bold mb-2">Web Development</h3>
-                <p className="text-gray-500 dark:text-gray-400">
-                  Custom web applications built with modern technologies like React, Node.js, and MongoDB.
-                </p>
-              </div>
-              <div className="text-center">
-                <a href="#" className="text-orange-500 hover:underline font-medium">Learn More</a>
-              </div>
-            </motion.div>
-
-            {/* Service Card 2 */}
-            <motion.div 
-              className="service-card p-8 rounded-xl shadow-lg hover:shadow-xl transition-all group"
-              style={{
-                backgroundColor: Profile1 === 'white' ? 'white' : '#334155',
-              }}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              whileHover={{ y: -10 }}
-            >
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-pink-100 dark:from-gray-700 dark:to-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <i className="fa-solid fa-paint-brush text-2xl text-orange-500"></i>
-                </div>
-                <h3 className="text-xl font-bold mb-2">UI/UX Design</h3>
-                <p className="text-gray-500 dark:text-gray-400">
-                  Beautiful and intuitive user interfaces designed with Figma, Adobe XD, and Photoshop.
-                </p>
-              </div>
-              <div className="text-center">
-                <a href="#" className="text-orange-500 hover:underline font-medium">Learn More</a>
-              </div>
-            </motion.div>
-
-            {/* Service Card 3 */}
-            <motion.div 
-              className="service-card p-8 rounded-xl shadow-lg hover:shadow-xl transition-all group"
-              style={{
-                backgroundColor: Profile1 === 'white' ? 'white' : '#334155',
-              }}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-              whileHover={{ y: -10 }}
-            >
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-pink-100 dark:from-gray-700 dark:to-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <i className="fa-solid fa-mobile-screen text-2xl text-orange-500"></i>
-                </div>
-                <h3 className="text-xl font-bold mb-2">Mobile Responsive</h3>
-                <p className="text-gray-500 dark:text-gray-400">
-                  Fully responsive designs that work perfectly on all devices from desktop to mobile.
-                </p>
-              </div>
-              <div className="text-center">
-                <a href="#" className="text-orange-500 hover:underline font-medium">Learn More</a>
-              </div>
-            </motion.div>
-          </div>
+          <h3 className="text-xl font-bold mb-2">Web Development</h3>
+          <p className="text-gray-500 dark:text-gray-400">
+            Custom web applications built with modern technologies like React, Node.js, and MongoDB.
+          </p>
         </div>
-      </section>
+        <div className="text-center">
+          <a href="#" className="text-orange-500 hover:underline font-medium">Learn More</a>
+        </div>
+      </motion.div>
+
+      {/* Service Card 2 */}
+      <motion.div 
+        className="service-card p-8 rounded-xl shadow-lg hover:shadow-xl transition-all group"
+        style={{
+          backgroundColor: Profile1 === 'white' ? 'white' : '#334155',
+        }}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+        whileHover={{ y: -10 }}
+      >
+        <div className="text-center mb-6">
+          <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-pink-100 dark:from-gray-700 dark:to-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <i className="fa-solid fa-mobile-screen-button text-2xl text-orange-500"></i>
+          </div>
+          <h3 className="text-xl font-bold mb-2">App Development</h3>
+          <p className="text-gray-500 dark:text-gray-400">
+            Cross-platform mobile apps using React Native for both iOS and Android with native performance.
+          </p>
+        </div>
+        <div className="text-center">
+          <a href="#" className="text-orange-500 hover:underline font-medium">Learn More</a>
+        </div>
+      </motion.div>
+
+      {/* Service Card 3 */}
+      <motion.div 
+        className="service-card p-8 rounded-xl shadow-lg hover:shadow-xl transition-all group"
+        style={{
+          backgroundColor: Profile1 === 'white' ? 'white' : '#334155',
+        }}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.5 }}
+        whileHover={{ y: -10 }}
+      >
+        <div className="text-center mb-6">
+          <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-pink-100 dark:from-gray-700 dark:to-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <i className="fa-solid fa-paint-brush text-2xl text-orange-500"></i>
+          </div>
+          <h3 className="text-xl font-bold mb-2">UI/UX Design</h3>
+          <p className="text-gray-500 dark:text-gray-400">
+            Beautiful and intuitive user interfaces designed with Figma, Adobe XD, and Photoshop.
+          </p>
+        </div>
+        <div className="text-center">
+          <a href="#" className="text-orange-500 hover:underline font-medium">Learn More</a>
+        </div>
+      </motion.div>
+
+      {/* Service Card 4 */}
+      <motion.div 
+        className="service-card p-8 rounded-xl shadow-lg hover:shadow-xl transition-all group"
+        style={{
+          backgroundColor: Profile1 === 'white' ? 'white' : '#334155',
+        }}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.6, duration: 0.5 }}
+        whileHover={{ y: -10 }}
+      >
+        <div className="text-center mb-6">
+          <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-pink-100 dark:from-gray-700 dark:to-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <i className="fa-solid fa-laptop-code text-2xl text-orange-500"></i>
+          </div>
+          <h3 className="text-xl font-bold mb-2">Responsive Design</h3>
+          <p className="text-gray-500 dark:text-gray-400">
+            Fully responsive designs that work perfectly on all devices from desktop to mobile.
+          </p>
+        </div>
+        <div className="text-center">
+          <a href="#" className="text-orange-500 hover:underline font-medium">Learn More</a>
+        </div>
+      </motion.div>
+    </div>
+  </div>
+</section>
 
       {/* Projects Section */}
       <section 

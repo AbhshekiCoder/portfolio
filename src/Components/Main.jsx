@@ -62,7 +62,57 @@ function Main({ Profile1 }) {
       setLoading(false);
     }
   };
-
+// Helper function to get appropriate icon for each skill
+const getSkillIcon = (iconName, skillName) => {
+  switch (iconName) {
+    case 'fa-html5':
+      return <i className="fab fa-html5 text-xl text-orange-500"></i>;
+    case 'fa-css3-alt':
+      return <i className="fab fa-css3-alt text-xl text-blue-500"></i>;
+    case 'fa-js':
+      return <i className="fab fa-js-square text-xl text-yellow-500"></i>;
+    case 'fa-react':
+      return <i className="fab fa-react text-xl text-blue-400"></i>;
+    case 'fa-node-js':
+      return <i className="fab fa-node-js text-xl text-green-600"></i>;
+    case 'fa-php':
+      return <i className="fab fa-php text-xl text-purple-500"></i>;
+    case 'fa-database':
+      return <i className="fas fa-database text-xl text-blue-600"></i>;
+    case 'nextjs':
+      return (
+        <svg className="w-5 h-5" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.5 4.5L4.905 4.095L7.5 6.695L10.095 4.095L10.5 4.5V4.5L7.5 7.5L4.5 4.5V4.5Z" fill="currentColor"/>
+          <path d="M10.5 10.5L10.095 10.905L7.5 8.305L4.905 10.905L4.5 10.5V10.5L7.5 7.5L10.5 10.5V10.5Z" fill="currentColor"/>
+          <path fillRule="evenodd" clipRule="evenodd" d="M7.5 0C3.35786 0 0 3.35786 0 7.5C0 11.6421 3.35786 15 7.5 15C11.6421 15 15 11.6421 15 7.5C15 3.35786 11.6421 0 7.5 0ZM1.5 7.5C1.5 4.18629 4.18629 1.5 7.5 1.5C10.8137 1.5 13.5 4.18629 13.5 7.5C13.5 10.8137 10.8137 13.5 7.5 13.5C4.18629 13.5 1.5 10.8137 1.5 7.5Z" fill="currentColor"/>
+        </svg>
+      );
+    case 'typescript':
+      return (
+        <svg className="w-5 h-5" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.5 1.5H1.5V13.5H13.5V1.5Z" stroke="currentColor" strokeWidth="1.5"/>
+          <path d="M6 9.5H4.5V6.5H6V7.25H4.5V8.75H6V9.5Z" fill="currentColor"/>
+          <path d="M10.5 9.5H9V8.75H10.5V8H9V6.5H10.5V7.25H11.25V6.5H12.75V8H11.25V8.75H12.75V9.5H11.25V10.25H10.5V9.5Z" fill="currentColor"/>
+        </svg>
+      );
+    case 'fa-firebase':
+      return <i className="fas fa-fire text-xl text-orange-500"></i>;
+    case 'fa-express':
+      return <i className="fas fa-server text-xl text-gray-800 dark:text-white"></i>;
+    case 'fa-mysql':
+      return <i className="fas fa-database text-xl text-blue-500"></i>;
+    case 'fa-materialui':
+      return (
+        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M0 2.475v10.39l3 1.733V7.67l6 3.465 6-3.465v3.465l-6 3.463v3.464l6 3.463 9-5.195V9.402l-3 1.733v3.463l-6 3.464-3-1.732 6-3.465V2.475L9 7.67 0 2.475zm24 0l-3 1.73V7.67l3-1.732V2.474z"/>
+        </svg>
+      );
+    case 'fa-react-native':
+      return <i className="fab fa-react text-xl text-blue-400"></i>;
+    default:
+      return <i className="fas fa-code text-xl text-orange-500"></i>;
+  }
+};
   useEffect(() => {
     fetchProjects();
   }, []);
@@ -77,23 +127,24 @@ function Main({ Profile1 }) {
   ];
 
   // Skills data
-  const skills = [
-    { icon: 'fa-html5', name: 'HTML5', level: 100 },
-    { icon: 'fa-css3-alt', name: 'CSS3', level: 100 },
-    { icon: 'fa-js', name: 'JavaScript', level: 100 },
-    { icon: 'fa-react', name: 'React', level: 100 },
-    { icon: 'fa-node-js', name: 'Node.js', level: 100 },
-    { icon: 'fa-php', name: 'PHP', level: 70 },
-    { icon: 'fa-database', name: 'MongoDB', level: 100 },
-    { icon: 'nextjs', name: 'Next.js', level: 90 },
-    {icon: 'typescript', name: 'Typescript', level: 90},
-    {icon: 'fa-firebase', name: 'Firebase', level: 100},
-    {icon: 'fa-express', name: 'Express.js', level: 100},
-    {icon: 'fa-database', name: 'SupaBase', level: 90},
-    {icon: 'fa-mysql', name: "MySQL", level: 90 },
-    {icon: 'fa-materialui', name:"Material UI", level: 90}
-    
-  ];
+
+const skills = [
+  { icon: 'fa-html5', name: 'HTML5', level: 100 },
+  { icon: 'fa-css3-alt', name: 'CSS3', level: 100 },
+  { icon: 'fa-js', name: 'JavaScript', level: 100 },
+  { icon: 'fa-react', name: 'React', level: 100 },
+  { icon: 'fa-node-js', name: 'Node.js', level: 100 },
+  { icon: 'fa-php', name: 'PHP', level: 70 },
+  { icon: 'fa-database', name: 'MongoDB', level: 100 },
+  { icon: 'nextjs', name: 'Next.js', level: 90 },
+  { icon: 'typescript', name: 'Typescript', level: 90 },
+  { icon: 'fa-firebase', name: 'Firebase', level: 100 },
+  { icon: 'fa-express', name: 'Express.js', level: 100 },
+  { icon: 'fa-database', name: 'SupaBase', level: 90 },
+  { icon: 'fa-mysql', name: "MySQL", level: 90 },
+  { icon: 'fa-materialui', name: "Material UI", level: 90 },
+  { icon: 'fa-react-native', name: "React Native", level: 100 }
+];
 
   // Form submission for contact form
   const handleSubmit = (e) => {
@@ -229,8 +280,7 @@ function Main({ Profile1 }) {
     >
       {/* Updated Description */}
       <p className={`text-lg mb-6 ${Profile1 === 'white' ? 'text-gray-600' : 'text-gray-300'}`}>
-        Creative Fullstack Developer & Freelancer specializing in building high-performance web applications, 
-        eye-catching ad designs, and conversion-focused digital experiences that help businesses thrive.
+       Building high-performance Web & Android apps with a focus on clean design, speed, and scalability. I also explore AI-driven solutions to bring smart features into modern applications. Passionate about turning ideas into powerful digital products for startups and businesses worldwide.
       </p>
       
       <div className="flex flex-wrap gap-4">
@@ -367,114 +417,107 @@ function Main({ Profile1 }) {
       </section>
 
       {/* Skills Section */}
-      <section 
-        id="skills" 
-        className="skills-section py-20 px-4 md:px-8 lg:px-16"
-        data-aos="fade-up"
+    // Skills Section
+<section 
+  id="skills" 
+  className="skills-section py-20 px-4 md:px-8 lg:px-16"
+  data-aos="fade-up"
+>
+  <div className="max-w-6xl mx-auto">
+    <div className="text-center mb-16">
+      <motion.h2 
+        className="text-3xl md:text-4xl font-bold mb-4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
       >
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <motion.h2 
-              className="text-3xl md:text-4xl font-bold mb-4"
+        Technical Skills
+      </motion.h2>
+      <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-pink-600 mx-auto"></div>
+    </div>
+
+    <div className="flex flex-col md:flex-row gap-12 items-center">
+      <div className="md:w-1/2">
+        <motion.p 
+          className={`text-lg mb-6 ${Profile1 === 'white' ? 'text-gray-600' : 'text-gray-300'}`}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+        >
+          Versatile web developer with expertise in building dynamic and responsive applications using modern technologies like MERN stack, React, PHP, Node.js, MySQLi, Firebase, and MongoDB. Proficient in front-end design with Tailwind, Bootstrap, Vanilla JavaScript, HTML, and CSS, Next.js, Typescript and experienced in back-end development with Express.js.
+        </motion.p>
+        
+        <div className="mt-8 grid grid-cols-2 gap-4">
+          {skills.map((skill, index) => (
+            <motion.div 
+              key={index} 
+              className="skill-item"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
             >
-              Technical Skills
-            </motion.h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-pink-600 mx-auto"></div>
-          </div>
-
-          <div className="flex flex-col md:flex-row gap-12 items-center">
-            <div className="md:w-1/2">
-              <motion.p 
-                className={`text-lg mb-6 ${Profile1 === 'white' ? 'text-gray-600' : 'text-gray-300'}`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
-              >
-                Versatile web developer with expertise in building dynamic and responsive applications using modern technologies like MERN stack, React, PHP, Node.js, MySQLi, Firebase, and MongoDB. Proficient in front-end design with Tailwind, Bootstrap, Vanilla JavaScript, HTML, and CSS, Next.js, Typescript and experienced in back-end development with Express.js.
-              </motion.p>
-              
-              <div className="mt-8 grid grid-cols-2 gap-4">
-                {skills.map((skill, index) => (
-                  <motion.div 
-                    key={index} 
-                    className="skill-item"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
-                  >
-                    <div className="flex justify-between mb-1">
-                      <span className="font-medium">{skill.name}</span>
-                      <span>{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
-                      <motion.div 
-                        className="bg-gradient-to-r from-orange-400 to-pink-600 h-2.5 rounded-full" 
-                        initial={{ width: 0 }}
-                        animate={{ width: `${skill.level}%` }}
-                        transition={{ delay: 0.4 + index * 0.1, duration: 1, ease: "easeOut" }}
-                      ></motion.div>
-                    </div>
-                  </motion.div>
-                ))}
+              <div className="flex justify-between mb-1">
+                <span className="font-medium">{skill.name}</span>
+                <span>{skill.level}%</span>
               </div>
-            </div>
-
-            <div className="md:w-1/2 flex justify-center">
-              <div className="relative w-64 h-64 md:w-80 md:h-80">
-                {/* Entire spinning group */}
-                <div className="absolute inset-0 spin-skill-wheel">
-                  {/* Animated rings */}
-                  <div className="absolute inset-0 rounded-full border-8 border-orange-400 border-opacity-20"></div>
-                  <div className="absolute inset-4 rounded-full border-8 border-pink-500 border-opacity-20"></div>
-
-                  {/* Rotating skill icons */}
-                  {skills.map((skill, index) => {
-                    const angle = (index * 360 / skills.length) - 90;
-                    const radius = 120;
-                    const x = radius * Math.cos(angle * Math.PI / 180);
-                    const y = radius * Math.sin(angle * Math.PI / 180);
-
-                    return (
-                      <motion.div
-                        key={index}
-                        className="absolute w-12 h-12 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 shadow-lg"
-                        style={{
-                          left: `calc(50% + ${x}px - 24px)`,
-                          top: `calc(50% + ${y}px - 24px)`,
-                        }}
-                        whileHover={{ scale: 1.2, rotate: 10 }}
-                        transition={{ type: "spring", stiffness: 300 }}
-                      >
-                        {skill.icon === 'nextjs' ? (
-                          <img
-                            src="https://cdn.simpleicons.org/nextdotjs/000000"
-                            alt="Next.js"
-                            className="w-5 h-5"
-                          />
-                        ) : (
-                          <i className={`fa-brands ${skill.icon} text-xl text-orange-500`}></i>
-                        )}
-                      </motion.div>
-                    );
-                  })}
-
-                  {/* Center text */}
-                  <motion.div 
-                    className="absolute inset-16 rounded-full bg-gradient-to-br from-orange-400 to-pink-600 flex items-center justify-center shadow-xl"
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 1 }}
-                  >
-                    <span className="text-white font-bold text-xl">Skills</span>
-                  </motion.div>
-                </div>
+              <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                <motion.div 
+                  className="bg-gradient-to-r from-orange-400 to-pink-600 h-2.5 rounded-full" 
+                  initial={{ width: 0 }}
+                  animate={{ width: `${skill.level}%` }}
+                  transition={{ delay: 0.4 + index * 0.1, duration: 1, ease: "easeOut" }}
+                ></motion.div>
               </div>
-            </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      <div className="md:w-1/2 flex justify-center">
+        <div className="relative w-64 h-64 md:w-80 md:h-80">
+          {/* Entire spinning group */}
+          <div className="absolute inset-0 spin-skill-wheel">
+            {/* Animated rings */}
+            <div className="absolute inset-0 rounded-full border-8 border-orange-400 border-opacity-20"></div>
+            <div className="absolute inset-4 rounded-full border-8 border-pink-500 border-opacity-20"></div>
+
+            {/* Rotating skill icons */}
+            {skills.map((skill, index) => {
+              const angle = (index * 360 / skills.length) - 90;
+              const radius = 120;
+              const x = radius * Math.cos(angle * Math.PI / 180);
+              const y = radius * Math.sin(angle * Math.PI / 180);
+
+              return (
+                <motion.div
+                  key={index}
+                  className="absolute w-12 h-12 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 shadow-lg"
+                  style={{
+                    left: `calc(50% + ${x}px - 24px)`,
+                    top: `calc(50% + ${y}px - 24px)`,
+                  }}
+                  whileHover={{ scale: 1.2, rotate: 10 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  {getSkillIcon(skill.icon, skill.name)}
+                </motion.div>
+              );
+            })}
+
+            {/* Center text */}
+            <motion.div 
+              className="absolute inset-16 rounded-full bg-gradient-to-br from-orange-400 to-pink-600 flex items-center justify-center shadow-xl"
+              whileHover={{ rotate: 360 }}
+              transition={{ duration: 1 }}
+            >
+              <span className="text-white font-bold text-xl">Skills</span>
+            </motion.div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Services Section */}
       <section 

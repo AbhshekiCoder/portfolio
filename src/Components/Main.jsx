@@ -521,7 +521,7 @@ const skills = [
               return (
                 <motion.div
                   key={index}
-                  className="absolute w-12 h-12 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 shadow-lg"
+                  className={`absolute w-12 h-12 flex items-center justify-center rounded-full dark:bg-gray-800 shadow-lg ${Profile1 == "white"?'bg-white':'bg-gray-600'}`}
                   style={{
                     left: `calc(50% + ${x}px - 24px)`,
                     top: `calc(50% + ${y}px - 24px)`,
@@ -1168,7 +1168,7 @@ const skills = [
                     <input 
                       type="text" 
                       name="name"
-                      className="w-full pl-12 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:border-gray-600"
+                      className="w-full pl-12 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 text-black dark:border-gray-60"
                       placeholder="Enter your name"
                       required
                     />
@@ -1183,7 +1183,7 @@ const skills = [
                     <input 
                       type="email" 
                       name="email"
-                      className="w-full pl-12 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:border-gray-600"
+                      className="w-full  pl-12 pr-4 py-3 border text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:border-gray-600 "
                       placeholder="Enter your email"
                       required
                     />
@@ -1198,7 +1198,7 @@ const skills = [
                     <input 
                       type="tel" 
                       name="phone"
-                      className="w-full pl-12 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:border-gray-600"
+                      className="w-full pl-12 text-black pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:border-gray-600"
                       placeholder="Enter your phone number"
                     />
                   </div>
@@ -1209,7 +1209,7 @@ const skills = [
                   <label className="block mb-2 font-semibold">Your Message</label>
                   <textarea 
                     name="description"
-                    className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 dark:bg-gray-700 dark:border-gray-600"
+                    className="w-full p-3  border rounded-lg focus:outline-none focus:ring-2 text-black focus:ring-orange-500 dark:bg-gray-700 dark:border-gray-600 "
                     rows="5"
                     placeholder="Write your message..."
                     required

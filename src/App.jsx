@@ -16,7 +16,7 @@ import { Helmet } from 'react-helmet';
 
 
 function App() {
-  const [toggle, setToggle] = useState("black");
+  const [toggle, setToggle] = useState("white");
   
     
   let mode = ()=>{
@@ -32,7 +32,7 @@ function App() {
   }
   let mode1 = localStorage.getItem("mode1");
   useEffect(()=>{
-    localStorage.setItem("mode1", "black")
+   
     if(mode1 == "black"){
       setToggle("black");
       document.querySelector('.form-check-input').checked = true;
